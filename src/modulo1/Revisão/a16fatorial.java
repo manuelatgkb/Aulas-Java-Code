@@ -2,7 +2,7 @@ package modulo1.Revisão;
 
 import java.util.Scanner;
 
-public class a16exercicioGrupo {
+public class a16fatorial {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
