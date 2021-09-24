@@ -1,6 +1,6 @@
 package modulo1.Revisão;
 
-public class a13 {
+public class a13forFor {
     public static void main(String[] args) {
 
         for(int linha = 1; linha <=10; linha ++){
