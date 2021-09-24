@@ -18,8 +18,7 @@ public class a12cadastroDeSalario {
                 else if(salario >= 5399.99) {
                     System.out.println("\n O salário é maior ou igual a 5399,99");
                 }
-                else if(salario == 0.0)
-                {
+                else if(salario == 0.0){
                     System.out.println("\n Salário igual a zero. Por favor digite o salário novamente");
                 }
                 else
@@ -28,5 +27,6 @@ public class a12cadastroDeSalario {
                 }                     
                  invalido = false;
             } while (salario <= 0);
+            sc.close();
    } 
 }

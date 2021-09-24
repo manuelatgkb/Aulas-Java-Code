@@ -20,6 +20,7 @@ public class a11cadastroIdade {
                         }                           
                          invalido = false;
                     } while (invalido);
+                    sc.close();
 
     }
 }
