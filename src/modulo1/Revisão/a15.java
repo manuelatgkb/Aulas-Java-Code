@@ -1,6 +1,6 @@
 package modulo1.Revisão;
 
-public class a14forEfor {
+public class a15 {
     public static void main(String[] args) {
         for (int i = 0; i < 10; i++) {
             System.out.println(i);
@@ -9,4 +9,5 @@ public class a14forEfor {
             System.out.println(i);
         }
     }
+    
 }
