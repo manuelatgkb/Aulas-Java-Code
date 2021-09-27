@@ -10,7 +10,10 @@ package modulo1.Revisão;
 
 import java.util.Scanner;
 
+import javax.swing.table.DefaultTableCellRenderer;
+
 public class r1letraNotaPonderada {
+    int opcao = 0; 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         double nota = Double.parseDouble(sc.nextLine());
@@ -22,27 +25,38 @@ public class r1letraNotaPonderada {
         return qtAlunos;
 
     switch(opcao){
-        case A:
-        nota = "nota1", "nota2", "nota3";
+        case 1: //media aritimética
+        int nota1 = 0;
+        int nota2 = 0;
+        int nota3 = 0;
+        int media = 0;
             System.out.println("Informe a nota");
             System.out.printf("nota 1");
             System.out.printf("nota 2");
             System.out.printf("nota 3");
-            System.out.printf((nota1+nota2+nota3)/3);
-
-
+            media =((nota1 + nota2+nota3)/3);
+            System.out.print(media);
             break;
 
-        case P:
-            System.out.println("Igual a 2");;
-            break;
+        case 2: // média ponderada
+        int nota4 = 0;
+        int nota5 = 0;
+        int nota6 =0;
+        int mediaPond = 0;
+        System.out.println("Informe a nota");
+        System.out.printf("nota 4");
+        System.out.printf("nota 5");
+        System.out.printf("nota 6");
+        System.out.print(((nota4*5)+(nota5*3)+(nota6*2))/3); 
+        return mediaPond;
+        break;
 
-        case Sair:
-            System.out.println("Igual a 2");;
+        default:
+            System.out.println("Sair");;
             break;
         }
             
-        sc.close();
+    sc.close();
 
     }
 }

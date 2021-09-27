@@ -1,7 +1,7 @@
 package modulo1.Revisão;
 import java.util.Scanner;
 
-public class a18cadastroBousorama {
+public class a18cadastreBousorama {
 
 public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

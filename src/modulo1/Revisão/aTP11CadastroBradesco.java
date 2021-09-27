@@ -2,7 +2,7 @@ package modulo1.Revisão;
 
 import java.util.Scanner;
 
-public class aTP11 {
+public class aTP11CadastroBradesco {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         byte opcao;
