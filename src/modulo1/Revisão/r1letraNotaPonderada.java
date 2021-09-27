@@ -9,6 +9,9 @@ Faça um programa que leia 3 notas de N alunos e acione o procedimento para cada
 package modulo1.Revisão;
 
 import java.util.Scanner;
+
+import org.w3c.dom.Notation;
+
 import java.util.Locale;
 
 public class r1letraNotaPonderada {
@@ -39,7 +42,7 @@ public class r1letraNotaPonderada {
         Double nota1 = 0;
         Double nota2 = 0;
         Double nota3 = 0;
-        Double media = 0;
+        notas1_3(nota1, nota2, nota3); // criar metodo de média
             System.out.println("Informe a nota");
             System.out.printf("nota 1");
             System.out.printf("nota 2");
@@ -53,7 +56,7 @@ public class r1letraNotaPonderada {
         Double nota4 = nota("Informe a primeira nota do aluno" + "i" + : "");
         Double nota5 = 0;
         Double nota6 =0;
-        Double mediaPond = 0;
+        notas4_6(nota4, nota5, nota6); // criar metodo mediaPond
         System.out.println("Informe a nota");
         System.out.printf("nota 4");
         System.out.printf("nota 5");
