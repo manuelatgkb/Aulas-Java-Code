@@ -23,7 +23,13 @@ public class r1letraNotaPonderada {
 
     switch(opcao){
         case A:
+        nota = "nota1", "nota2", "nota3";
             System.out.println("Informe a nota");
+            System.out.printf("nota 1");
+            System.out.printf("nota 2");
+            System.out.printf("nota 3");
+            System.out.printf((nota1+nota2+nota3)/3);
+
 
             break;
 
