@@ -1,6 +1,6 @@
 package modulo1.Revisão;
 
-public class a17break {
+public class a17switchBreak {
     public static void main(String[] args) {
         int opcao = 2;
 
