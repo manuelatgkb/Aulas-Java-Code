@@ -1,4 +1,4 @@
-package modulo1.Revisão;
+package modulo1.Revisao;
 import java.util.Scanner;
 
 public class a18cadastreBousorama {

@@ -6,23 +6,45 @@ se for ‘P’, calcula e escreve a sua média ponderada (pesos: 5, 3 e 2).
 Faça um programa que leia 3 notas de N alunos e acione o procedimento para cada aluno. 
 (N deve ser lido do teclado)
 */
-package modulo1.Revisão;
+package modulo1.Revisao;
 
 import java.util.Scanner;
 
-import org.w3c.dom.Notation;
+import javax.print.attribute.standard.QueuedJobCount;
+
+import jdk.dynalink.beans.StaticClass;
 
 import java.util.Locale;
 
 public class r1letraNotaPonderada {
     int opcao = 0; 
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         double nota = Double.parseDouble(sc.nextLine());
+        boolean opcao = (media_nota, media_pond);
+        cabecalho();
+        int case1 =  media_nota(1, 3, 5);
+        int case2 = media_pond(1, 2, 3);
+        valida_nota(nota);
+        pedeNota("Digite a nota %f : ");
+        qtAlunos();
+
     }
 
-    public static int media_nota(){
+    public static void cabecalho(){
+        System.out.println("____________NOTAS___________");
+    }
 
+
+    public static int media_nota(int n1, int n2, int n3){
+        int media_nota = (n1 + n2 +n3) /3;
+        return media_nota;
+    }
+
+    public static int media_pond(int n1, int n2, int n3){
+        int media_pond = ((n1*5) + (n2*3) +(n3*2)) /3;
+        return media_pond;
     }
 
     static boolean valida_nota(double nota){
@@ -33,7 +55,6 @@ public class r1letraNotaPonderada {
             return true;
         }
     }
-
     static double pedeNota(String mensagem){
         double nota;
         System.out.printf(mensagem);
@@ -47,41 +68,17 @@ public class r1letraNotaPonderada {
         System.out.println("Informe a quantidade de alunos: ");
         int qtAlunos = Integer.parseInt(sc.nextLine());
         return qtAlunos;
-
-    static double valida_nota (String Mensagem){
-        boolean valida = true;
-        double valida = 0;
-        do{
-            System.out.println(Mensagem);
-            nota = Double.parseDouble(sc.nextLine());
-            valida = validarNota(nota);
-        }while(!=valida);
-        return nota;
+        
     }
 
     switch(opcao){
-        case 1: 
+        case 1: // media aritimética
+            case1();
 
-
-        case 2: // média ponderada
-        Double nota4 = nota("Informe a primeira nota do aluno" + "i" + : "");
-        Double nota5 = 0;
-        Double nota6 =0;
-        notas4_6(nota4, nota5, nota6); // criar metodo mediaPond
-        System.out.println("Informe a nota");
-        System.out.printf("nota 4");
-        System.out.printf("nota 5");
-        System.out.printf("nota 6");
-        System.out.print(((nota4*5)+(nota5*3)+(nota6*2))/3); 
-        return mediaPond;
-        break;
-
-        default:
-            System.out.println("Sair");;
-            break;
+        case 2: // media ponderada
+            case2();
         }
             
-        
     sc.close();
 
     }
