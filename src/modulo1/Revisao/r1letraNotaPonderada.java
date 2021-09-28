@@ -21,12 +21,34 @@ public class r1letraNotaPonderada {
         double nota = Double.parseDouble(sc.nextLine());
     }
 
+    public static int media_nota(){
+
+    }
+
+    static boolean valida_nota(double nota){
+        if(nota > 10 || nota < 0){
+            System.out.print("Nota invalida. Insira uma nota válida");
+            return false;
+        }else{
+            return true;
+        }
+    }
+
+    static double pedeNota(String mensagem){
+        double nota;
+        System.out.printf(mensagem);
+        do{
+            nota = Double.parseDouble(sc.nextLine());
+        }while(!valida_nota(nota));
+            return nota;
+    }
+
     static int qtAlunos(){
         System.out.println("Informe a quantidade de alunos: ");
         int qtAlunos = Integer.parseInt(sc.nextLine());
         return qtAlunos;
 
-    static double nota (String Mensagem){
+    static double valida_nota (String Mensagem){
         boolean valida = true;
         double valida = 0;
         do{
@@ -38,18 +60,7 @@ public class r1letraNotaPonderada {
     }
 
     switch(opcao){
-        case 1: //media aritimética
-        Double nota1 = 0;
-        Double nota2 = 0;
-        Double nota3 = 0;
-        notas1_3(nota1, nota2, nota3); // criar metodo de média
-            System.out.println("Informe a nota");
-            System.out.printf("nota 1");
-            System.out.printf("nota 2");
-            System.out.printf("nota 3");
-            media =((nota1 + nota2+nota3)/3);
-            System.out.print(media);
-            break;
+        case 1: 
 
 
         case 2: // média ponderada
