@@ -7,6 +7,7 @@ public class atp14metodoSomarDividirSubtrairMultiplicar {
         cabecalho();
         escolhe_menu(opcao);
         ler("\n Digite um número");
+        imprima();
     }
     // Construa um método que imprima uma mensagem para ser usada como cabeçalho da aplicação. 
     //A mensagem deve exibir a mensagem “Calculadora”.
@@ -40,7 +41,7 @@ public class atp14metodoSomarDividirSubtrairMultiplicar {
             case 3: // multiplicar
                 int n5 = ler("\n Digite o n3: ");
                 int n6 = ler("\n Digite o n4");
-                int mul = multiplicaçao(n5, n6);
+                int mul = multiplicaçao(n5,  n6);
                 System.out.printf("A multiplicação é: %d");
             break; 
 
@@ -60,16 +61,21 @@ public class atp14metodoSomarDividirSubtrairMultiplicar {
        return soma;
     }
     static int sub(int n3, int n4){
-        int sub = n3 + n4;
+        int sub = n3 - n4;
         return sub;
      }
      static int mul(int n5, int n6){
-        int mul = n5 + n6;
+        int mul = n5 * n6;
         return mul;
      }
      static int div(int n7, int n8){
-        int div = n7 + n8;
+        int div = n7 / n8;
         return div;
+     }
+
+     //imprimir o resultado
+     static double imprima(){
+         System.out.println("O resultado é %d: ");
      }
 
     
