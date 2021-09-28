@@ -68,15 +68,16 @@ public class r1letraNotaPonderada {
         System.out.println("Informe a quantidade de alunos: ");
         int qtAlunos = Integer.parseInt(sc.nextLine());
         return qtAlunos;
-        
     }
 
     switch(opcao){
         case 1: // media aritimética
             case1();
+        break;
 
         case 2: // media ponderada
             case2();
+        break;
         }
             
     sc.close();
