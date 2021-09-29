@@ -12,7 +12,7 @@ public class grupodeestudos2 {
     public static void main(String[] args) {
         cabecalho();
         int opcao = lerfilhos("\n Quantos filhos você tem? ");
-        double lersalario("\n Qual é o valor do seu salário mensal? ");
+        double lernumero =lernumero  ("\n Qual é o valor do seu salário mensal? ");
         validanumero();
         double slr = salário();
         int nf = numeroFilhos();
@@ -42,7 +42,7 @@ public class grupodeestudos2 {
     }
 
 
-    static double lersalario(String mensagem){
+    static double ler(String mensagem){
         Scanner scan = new Scanner(System.in);
         System.out.print(mensagem);
         double numero = Double.parseDouble(scan.nextLine());
