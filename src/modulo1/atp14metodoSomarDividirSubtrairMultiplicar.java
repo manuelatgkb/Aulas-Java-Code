@@ -5,79 +5,100 @@ import java.util.Scanner;
 public class atp14metodoSomarDividirSubtrairMultiplicar {
     public static void main(String[] args) {
         cabecalho();
-        escolhe_menu(opcao);
-        ler("\n Digite um número");
-        imprima();
+        menu();
+        int opcao = leropcao("\n Escolha uma opção: ");
+        double n1 = ler("\n Digite o primeiro número: ");
+        double n2 = ler("\n Digite o segundo número: ");
+        escolhe_menu(opcao, n1, n2);
     }
     // Construa um método que imprima uma mensagem para ser usada como cabeçalho da aplicação. 
     //A mensagem deve exibir a mensagem “Calculadora”.
     static void cabecalho(){
         System.out.println("============Calculadora===========");
     }
-//metodo de sacnner 
-    static int ler(String mensagem){
-        Scanner scan = new Scanner(System.in);
-        System.out.println(mensagem);
+// menu
+    static void menu(){
+        System.out.println("\t1 somar");
+        System.out.println("\t2 subtrair");
+        System.out.println("\t3 multiplicar ");
+        System.out.println("\t4 dividir");
     }
+
+    //validar 
+    static boolean validaopcao(int opcao){
+        if(opcao > 4 || opcao < 1){
+            System.out.println("\n Opção Inválida ");
+            return false;
+        }else{ 
+        return true;}
+    }
+//metodo de scanner 
+    static double ler(String mensagem){
+        Scanner scan = new Scanner(System.in);
+        System.out.print(mensagem);
+        double numero = Double.parseDouble(scan.nextLine());
+        return numero;
+        // scan.close();
+    }
+
+    static int leropcao(String mensagem){
+        int opcao;
+        Scanner scan = new Scanner(System.in);
+        do{System.out.print(mensagem);
+            opcao = Integer.parseInt(scan.nextLine());
+        }while(!validaopcao(opcao));
+        return opcao;
+        // scan.close();
+    }
+
 //menu com opcoes somar, subtrair, dividir e multiplicar
-    static int escolhe_menu(){
+    static void escolhe_menu(int opcao, double n1, double n2){
         switch(opcao){
 
             case 1: //somar
-                int n1 = ler("\n Digite o n1: ");
-                int n2 = ler("\n Digite o n2: ");
-                int soma = somar(n1, n2);
-                System.out.printf("A soma é de %d: ", soma);
+                double soma = somar(n1, n2);
+                System.out.printf("A soma é %.2f: ", soma);
             break;
 
             case 2: //subtrair
-                int n3 = ler("\n Digite o n3: ");
-                int n4 = ler("\n Digite o n4");
-                int sub = subtrair(n3, n4);
-                System.out.printf("A subtração é: %d");
+                double sub = subtrair(n1, n2);
+                System.out.printf("A subtração é: %.2f", sub);
             break;
 
 
             case 3: // multiplicar
-                int n5 = ler("\n Digite o n3: ");
-                int n6 = ler("\n Digite o n4");
-                int mul = multiplicaçao(n5,  n6);
-                System.out.printf("A multiplicação é: %d");
+                double mul = multiplicar(n1,  n2);
+                System.out.printf("A multiplicação é: %.2f", mul);
             break; 
 
 
             case 4 : //dividir
-                int n7 = ler("\n Digite o n7: ");
-                int n8 = ler("\n Digite o n8");
-                int div = dividir(n7, n8);
-                System.out.printf("A divisão é: %d");
+                double div = dividir(n1, n2);
+                System.out.printf("A divisão é: %.2f", div);
             break;
     
         }
     }
 //metodos somar, subtrair, dividir e multiplica
-    static int somar(int n1, int n2){
-       int soma = n1 + n2;
+    static double somar(double n1, double n2){
+       double soma = n1 + n2;
        return soma;
     }
-    static int sub(int n3, int n4){
-        int sub = n3 - n4;
+    static double subtrair(double n3, double n4){
+        double sub = n3 - n4;
         return sub;
      }
-     static int mul(int n5, int n6){
-        int mul = n5 * n6;
+     static double multiplicar(double n5, double n6){
+        double mul = n5 * n6;
         return mul;
      }
-     static int div(int n7, int n8){
-        int div = n7 / n8;
+     static double dividir(double n7, double n8){
+        double div = n7 / n8;
         return div;
      }
-
      //imprimir o resultado
-     static double imprima(){
-         System.out.println("O resultado é %d: ");
-     }
-
-    
+     /*static void imprimir(double resultado){
+         System.out.prdoublef("O resultado é %.2f: ", resultado);
+     }*/
 }
 
