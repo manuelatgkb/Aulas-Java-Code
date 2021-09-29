@@ -14,17 +14,16 @@ public class atividade15 {
         pessoa2.sobrenome = "Maravilha";
         pessoa2.idade = 50; 
 
-        imprimir("A primeira pessoa é " + pessoa1.nome, pessoa1.sobrenome, pessoa1.idade);
-        imprimir("A segunda pessoa é " + pessoa2.nome, pessoa2.sobrenome, pessoa2.idade);
-
+        pessoa1.imprimir();
+        pessoa2.imprimir();
     }
 
     static void cabecalho(){
         System.out.println("\n ===========Cadastro de Pessoas===========");
     }
 
-    static void imprimir(String nome, String sobrenome, int idade){
+    /*static void imprimir(){
         System.out.printf("\n %s %s %d anos.", nome, sobrenome, idade);
 
-    }
+    }*/
 }
