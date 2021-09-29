@@ -5,21 +5,28 @@ public class Calculadora{
     int n2;
     String nome;
 
-    static int somar(int n1, int n2){
+    public int somar(int n1, int n2){
+        
         int s = n1 + n2;
         return s;
     }
-    static int subtrair(int n1, int n2){
+    public int subtrair(int n1, int n2){
         int sub = n1 - n2;
         return sub;
         }
-    static int dividir(int n1, int n2){
+    public int dividir(int n1, int n2){
         int div = n1 / n2;
         return div;
             }
-    static int multiplicar(int n1, int n2){
+    public int multiplicar(int n1, int n2){
         int mult = n1 * n2;
         return mult;
                 }
+    private boolean valida(int n){
+        if(n > 0){
+            return false;
+        } 
+        return true;
+    }
     
 }
