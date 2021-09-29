@@ -2,8 +2,6 @@ package modulo1;
 
 import java.util.Scanner;
 
-import jdk.javadoc.internal.doclets.formats.html.markup.TagName;
-
 public class a22 {
     public static void main(String[] args) {
         ler("\n Digite um número: ");
@@ -23,12 +21,8 @@ public class a22 {
         //scan.close();
     }
     static boolean valida_positivos(int numero){
-        boolean valido;
-        if(numero < 0){
-            valido = false;
-        }else{
-            valido = true;
-        }
-        return valido;
+        if(numero < 0)
+            return false;
+        return true;
     }
 }
