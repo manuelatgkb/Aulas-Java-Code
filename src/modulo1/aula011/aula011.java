@@ -1,6 +1,4 @@
 package modulo1.aula011;
-import java.util.Scanner;
-import modulo1.aula011.Produto;
 
 public class aula011 {
     public static void main(String[] args) {

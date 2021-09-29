@@ -10,12 +10,12 @@ import java.util.Scanner;
 
 public class grupodeestudos2 {
     public static void main(String[] args) {
-        cabecalho();
-        int opcao = lerfilhos("\n Quantos filhos você tem? ");
-        double lernumero =lernumero  ("\n Qual é o valor do seu salário mensal? ");
-        validanumero();
-        double slr = salário();
-        int nf = numeroFilhos();
+        // cabecalho();
+        // int opcao = lerfilhos("\n Quantos filhos você tem? ");
+        // double lernumero =lernumero  ("\n Qual é o valor do seu salário mensal? ");
+        // validanumero();
+        // double slr = salário();
+        // int nf = numeroFilhos();
     }
 
     static void cabecalho(){
@@ -28,7 +28,7 @@ public class grupodeestudos2 {
         return div;
     */
 
-    static int numeroFilhos(int numeroFilhos){
+    static int numeroFilhos(int nf){
         int nFilhos = nf;
         return nf;
     }
@@ -54,7 +54,7 @@ public class grupodeestudos2 {
         return salario;
     }
 
-    static boolean validanumero(){
+    static boolean validanumero(int opcao){
         if(opcao > 4 || opcao < 1){
             System.out.println("\n Opção Inválida ");
             return false;

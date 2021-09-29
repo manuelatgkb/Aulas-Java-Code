@@ -3,8 +3,9 @@ package modulo1;
 import java.util.Scanner;
 
 public class a18 {
+    static Scanner sc = new Scanner(System.in);
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
         
 
         produto();
@@ -28,7 +29,6 @@ public class a18 {
 
     static void naoprevista(){
 
-    }
         byte opcao;
         char continua = 'N';
 
@@ -71,9 +71,6 @@ public class a18 {
             }
 
         }while (opcao < 1 || opcao > 3 || continua == 'V');
-
-        sc.close();
-    }
 
         sc.close();
     }

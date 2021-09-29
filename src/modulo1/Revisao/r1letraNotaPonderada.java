@@ -10,19 +10,14 @@ package modulo1.Revisao;
 
 import java.util.Scanner;
 
-import javax.print.attribute.standard.QueuedJobCount;
-
-import jdk.dynalink.beans.StaticClass;
-
-import java.util.Locale;
-
 public class r1letraNotaPonderada {
     int opcao = 0; 
+    static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        
         double nota = Double.parseDouble(sc.nextLine());
-        boolean opcao = (media_nota, media_pond);
+        //boolean opcao = (media_nota, media_pond);
         cabecalho();
         int case1 =  media_nota(1, 3, 5);
         int case2 = media_pond(1, 2, 3);
@@ -70,7 +65,7 @@ public class r1letraNotaPonderada {
         return qtAlunos;
     }
 
-    switch(opcao){
+    /*switch(opcao){
         case 1: // media aritimética
             case1();
         break;
@@ -80,7 +75,7 @@ public class r1letraNotaPonderada {
         break;
         }
             
-    sc.close();
+    sc.close();*/
 
-    }
+
 }

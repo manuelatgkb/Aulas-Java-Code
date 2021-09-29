@@ -1,4 +1,4 @@
-package aula11;
+package modulo1.aula011;
 
 public class Calculadora{
     int n1;
