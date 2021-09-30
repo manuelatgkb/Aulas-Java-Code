@@ -1,4 +1,4 @@
-package modulo1;
+package modulo1.Revisao;
 
 import java.util.Scanner;
 

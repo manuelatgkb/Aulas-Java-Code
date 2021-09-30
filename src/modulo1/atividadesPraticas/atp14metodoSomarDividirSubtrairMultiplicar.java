@@ -1,4 +1,4 @@
-package modulo1;
+package modulo1.atividadesPraticas;
 
 import java.util.Scanner;
 

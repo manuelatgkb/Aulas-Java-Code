@@ -1,4 +1,4 @@
-package modulo1;
+package modulo1.Revisao;
 
 public class a4doubleFloat {
     public static void main(String[] args) {

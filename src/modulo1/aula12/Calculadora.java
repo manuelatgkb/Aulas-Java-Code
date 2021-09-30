@@ -1,4 +1,4 @@
-package modulo1.atividadesPraticas.aula12;
+package modulo1.aula12;
 import java.util.Scanner;
 
 public class Calculadora{

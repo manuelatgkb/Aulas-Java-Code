@@ -4,7 +4,7 @@ Faça  um procedimento que  leia  esses  dados  para  um número  não  determin
 Faça um programa que acione o procedimento.
 */
 
-package modulo1;
+package modulo1.grupoEstudos;
 
 import java.util.Scanner;
 

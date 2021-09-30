@@ -1,4 +1,4 @@
-package modulo1;
+package modulo1.Revisao;
 
 public class a9while {
     public static void main(String[] args) {
