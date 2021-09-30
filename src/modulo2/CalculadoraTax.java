@@ -1,9 +1,9 @@
 package modulo2;
 
 public class CalculadoraTax{
-        public double taxaTransf = 0.001; 
-        public double taxaSaque = 1.30; 
-        public int qtdSaque; 
+        private double taxaTransf = 0.001; 
+        private double taxaSaque = 1.30; 
+        private int qtdSaque; 
 
         double trBancarias(double valorTransferido){
             double ValorTaxa = valorTransferido * taxaTransf;
@@ -12,7 +12,7 @@ public class CalculadoraTax{
 
         double taxaSaque(double valorSaque){
             qtdSaque++;
-            if(qtdSaque %5 ==0)
+            if(qtdSaque %5 == 0)
                 return valorSaque + taxaSaque;
             return valorSaque;
         }

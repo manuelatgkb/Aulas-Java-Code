@@ -8,7 +8,7 @@ public class CalculadoraMain {
     
     CalculadoraTax calctaxas = new CalculadoraTax();
 
-    calctaxas.trBancarias(100.00, 0.001);
-    calctaxas.taxaSaque(1.30, 5);
+    calctaxas.trBancarias(100.00);
+    calctaxas.taxaSaque(5);
     }
 }

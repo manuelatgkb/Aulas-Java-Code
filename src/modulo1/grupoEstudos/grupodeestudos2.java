@@ -4,7 +4,7 @@ Faça  um procedimento que  leia  esses  dados  para  um número  não  determin
 Faça um programa que acione o procedimento.
 */
 
-package modulo1.grupoEstudos;
+/*package modulo1.grupoEstudos;
 
 import java.util.Scanner;
 
@@ -28,7 +28,7 @@ public class grupodeestudos2 {
         return div;
     */
 
-    static int numeroFilhos(int nf){
+    /*static int numeroFilhos(int nf){
         int nFilhos = nf;
         return nf;
     }
@@ -62,3 +62,4 @@ public class grupodeestudos2 {
         return true;}
     }
 }
+*/

@@ -1,4 +1,4 @@
-package modulo1.dojo;
+/*package modulo1.dojo;
 
 import java.util.Scanner;
 
@@ -51,7 +51,7 @@ public class dojo210928 {
         return info;
     }*/
 
-    static int somar(int n1, int n2){
+    /*static int somar(int n1, int n2){
         int soma1 = n1 + n2;
         return soma1;
     }
@@ -60,4 +60,4 @@ public class dojo210928 {
         int d = (n3/n4);
         return d; 
     }
-}
+}*/
