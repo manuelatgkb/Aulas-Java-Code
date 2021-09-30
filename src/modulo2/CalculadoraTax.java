@@ -12,7 +12,7 @@ public class CalculadoraTax{
 
         double taxaSaque(double valorSaque){
             qtdSaque++;
-            if(qtdSaque %5 == 0)
+            if(qtdSaque %4 == 0)
                 return valorSaque + taxaSaque;
             return valorSaque;
         }

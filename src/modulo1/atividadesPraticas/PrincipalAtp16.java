@@ -1,4 +1,4 @@
-package modulo1.atividadesPraticas;
+/* package modulo1.atividadesPraticas;
 
 public class PrincipalAtp16 {
     public static void main(String[] args) {
@@ -15,6 +15,9 @@ public class PrincipalAtp16 {
         calq2.idade = 50; 
 
         calq1.imprimir();
-        calq2.imprimir();
+       // ((Object) calq2).imprimir();
     }
-}
+
+    private static void cabecalho() {
+    }
+}*/

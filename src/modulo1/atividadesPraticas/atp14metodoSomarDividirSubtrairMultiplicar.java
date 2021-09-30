@@ -1,4 +1,4 @@
-package modulo1.atividadesPraticas;
+/*package modulo1.atividadesPraticas;
 
 import java.util.Scanner;
 
@@ -100,5 +100,4 @@ public class atp14metodoSomarDividirSubtrairMultiplicar {
      /*static void imprimir(double resultado){
          System.out.prdoublef("O resultado é %.2f: ", resultado);
      }*/
-}
 
