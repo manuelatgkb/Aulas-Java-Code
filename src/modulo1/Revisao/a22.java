@@ -8,7 +8,7 @@ public class a22 {
         
     }
     static int ler(String mensagem){
-        Scanner scan = new Scanner(System.in);
+       Scanner scan = new Scanner(System.in);
         int dado;
         do{
             System.out.println(mensagem);

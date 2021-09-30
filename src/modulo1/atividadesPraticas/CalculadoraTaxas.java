@@ -1,7 +1,5 @@
 package modulo1.atividadesPraticas;
 
-import java.lang.annotation.Retention;
-
 public class CalculadoraTaxas {
     double n1;
     double novosaldo;
@@ -13,12 +11,12 @@ public class CalculadoraTaxas {
     public String nome;
     public int idade;
 
-    public double transferencia(double saldo, double valor){
+    //public double transferencia(double saldo){
         
         double s = (saldo + valor);
-        double novosaldo = s *-0.001%
+       // double novosaldo = s *-0.001;
        // return novosaldo;
-    }
+
     public double subtrair(double n1){
         return saldoFinal;
     }

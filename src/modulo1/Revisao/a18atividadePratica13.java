@@ -3,8 +3,8 @@ package modulo1.Revisao;
 public class a18atividadePratica13 {
     
     public static void main() { 
-        int numero = somar(10, 20);
-        int soma1 =  somar(1, 2);
+       // int numero = somar(10, 20);
+       // int soma1 =  somar(1, 2);
         cabecalho();
     }
 

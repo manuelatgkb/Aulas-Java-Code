@@ -7,7 +7,7 @@ public class a12cadastroDeSalario {
     System.out.printf("Cadastro de salários\n");
     Scanner sc = new Scanner(System.in);
     double salario = 0.0;
-    boolean invalido = true;
+    //boolean invalido = true;
 
             do {
                 System.out.printf("Digite seu salário: ");
@@ -25,7 +25,7 @@ public class a12cadastroDeSalario {
                 {
                     System.out.println("Invalido");
                 }                     
-                 invalido = false;
+               //  invalido = false;
             } while (salario <= 0);
             sc.close();
    } 

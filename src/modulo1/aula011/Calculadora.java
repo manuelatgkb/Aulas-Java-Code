@@ -21,12 +21,10 @@ public class Calculadora{
     public int multiplicar(int n1, int n2){
         int mult = n1 * n2;
         return mult;
-                }
-    private boolean valida(int n){
-        if(n > 0){
-            return false;
-        } 
-        return true;
-    }
     
-}
+    //private boolean valida(int n){
+        //if(n > 0){
+            //return false;
+        } 
+        //return true;
+    }
