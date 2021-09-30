@@ -1,13 +1,20 @@
 package modulo1.atividadesPraticas.aula12;
 
-int numeroSaques;
- 
+public class Principal{
+    private double taxaTransacao = 0.001;
+    private double taxaSaque = 1.30;
+    private int numSaques;
 
-public class Principal {
-    public static void main(String[] args) {
-        Calculadora calc1 = new Calculadora();
-
-        calc1.transferencias(100, 0.001);
-        calc1.taxadesaque(1.30, 5);
+    public double taxaTransacao(double valor){
+        double resultTaxaTransf = valor * (taxaTransacao / 100);
+        return resultTaxaTransf;
     }
-}
+
+    public double taxaSaque(double valor){
+        numSaques ++;
+        if (numSaques % 5 == 0) {
+            return taxaSaque;
+        }
+        return 0;
+    }
+}  
