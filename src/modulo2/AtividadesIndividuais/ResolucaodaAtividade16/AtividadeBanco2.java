@@ -17,16 +17,25 @@ public class AtividadeBanco2 {
     }
    
     static boolean retornaMenu(){
-        boolean resposta;
+        boolean resposta = false;
+        char resposta_continua;
+        do{
             System.out.println("Deseja voltar ao menu principal? (S/N)");
-            char resposta_continua = sc.nextLine().toUpperCase().charAt(0);
+            resposta_continua = sc.nextLine().toUpperCase().charAt(0);
+
             if(resposta_continua == 'S'){
                 resposta = true;
             }
+            else if(resposta_continua == 'N'){
+                System.out.println("Até mais!!!");
+            }
             else{
-                System.out.println(" Encerrando o sistema \n");
-                resposta = false;;
-        }return resposta;
+                System.out.println(" Opção inválida. Digite (S/N)! \n");
+
+            }
+        }while(resposta_continua != 'S' && resposta_continua != 'N');
+
+        return resposta;
     }
 
     static void opcoesMenu(int opcao){
@@ -38,7 +47,7 @@ public class AtividadeBanco2 {
             case 2: 
                 System.out.println("Saques");
             break;
-
+        }
     }
 
     static int menu(){
