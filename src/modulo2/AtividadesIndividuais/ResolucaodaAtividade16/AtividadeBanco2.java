@@ -1,10 +1,12 @@
 package modulo2.AtividadesIndividuais.ResolucaodaAtividade16;
 
-import java.text.BreakIterator;
 import java.util.Scanner;
 
 public class AtividadeBanco2 {
     static Scanner sc = new Scanner(System.in);
+    static CalculadoraTaxas2 calcTaxas = new CalculadoraTaxas2();
+    static double taxaTransferencia = 0;
+    static double taxasSaque = 0;
 
     public static void main(String[] args) {
         boolean continua = false;
@@ -13,12 +15,14 @@ public class AtividadeBanco2 {
             opcoesMenu(op);
             continua = retornaMenu();
         }while(continua);
+        System.out.printf("\n O valor de todas as taxas cobradas foi de %.4f, \n sendo %.4f de transferencia  e %.4 de transferencia de saques", taxaTransferencia, taxasSaque);
         System.out.println();
     }
    
     static boolean retornaMenu(){
         boolean resposta = false;
         char resposta_continua;
+
         do{
             System.out.println("Deseja voltar ao menu principal? (S/N)");
             resposta_continua = sc.nextLine().toUpperCase().charAt(0);
@@ -39,13 +43,19 @@ public class AtividadeBanco2 {
     }
 
     static void opcoesMenu(int opcao){
-        int op =  menu();
-        switch(op){
+        switch(opcao){
             case 1: 
-                System.out.println("Transferências");
+                System.out.println("+++++++Transferências++++++");
+                double taxaT = transferencia();
+                taxaTransferencia +=taxaT;
+                System.out.printf("O valor da taxa de transferência é:  %2f \n", taxaT);
+
             break;
             case 2: 
-                System.out.println("Saques");
+                System.out.println("++++++++Saques++++++++");
+                double taxaS = saque();
+                taxasSaque += taxaS;
+                System.out.printf("\n O valor de taxa de Saque foi de %.2f, \n\n", taxaS);
             break;
         }
     }
@@ -65,19 +75,17 @@ public class AtividadeBanco2 {
             return opcao;
     }
 
-    static void Feito()
-    {
-    CalculadoraTaxas2 calcTaxas = new CalculadoraTaxas2();
-    double taxaT1 = calcTaxas.CalculadoraTaxaTransferencia(1000);
-    double taxaT2 = calcTaxas.CalculadoraTaxaTransferencia(500);
+    static double transferencia(){
+        System.out.print("Digite o valor a ser transferido: ");
+        double valor = Double.parseDouble(sc.nextLine());
+        double taxaT1 = calcTaxas.CalculadoraTaxaTransferencia(valor);
+        return taxaT1;
+    }
 
-    double taxaS1 = calcTaxas.calculaTaxaSaque(50);
-    double taxaS2 = calcTaxas.calculaTaxaSaque(50);
-    double taxaS3 = calcTaxas.calculaTaxaSaque(50);
-    double taxaS4 = calcTaxas.calculaTaxaSaque(50);
-    double taxaS5 = calcTaxas.calculaTaxaSaque(50);
-
-    System.out.printf("Os valores de taxa de transferência forma %2f e %.2f \n", taxaT1, taxaT2);
-    System.out.printf("Os valores de taxa de Saque forma %.2f, %.2f, %.2f, %.2f, %.2f \n", taxaS1, taxaS2, taxaS3, taxaS4, taxaS5);
+    static double saque(){
+        System.out.print("Digite o valor a ser sacado: ");
+        double valor = Double.parseDouble(sc.nextLine());
+        double taxaS1 = calcTaxas.calculaTaxaSaque(50);
+        return taxaS1;
     }
 }
