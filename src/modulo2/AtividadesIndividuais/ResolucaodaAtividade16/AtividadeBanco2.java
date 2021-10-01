@@ -1,7 +1,23 @@
 package modulo2.AtividadesIndividuais.ResolucaodaAtividade16;
 
+import java.util.Scanner;
+
 public class AtividadeBanco2 {
     public static void main(String[] args) {
+        
+    }
+
+    static void menu(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("===============Calculadora de Taxas==================\n");
+        System.out.println("\t1-Taxa Transferência \n\t2 - Taxa Saque \n");
+        System.out.println("===============+++++++++++++++++++++==================\n");
+        System.out.print("Escolha uma opção do menu: ");
+        int opcao = Integer.parseInt(sc.nextLine());
+        System.out.println();
+    }
+
+        static void Feito(){
         CalculadoraTaxas2 calcTaxas = new CalculadoraTaxas2();
         double taxaT1 = calcTaxas.CalculadoraTaxaTransferencia(1000);
         double taxaT2 = calcTaxas.CalculadoraTaxaTransferencia(500);
