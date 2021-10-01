@@ -5,7 +5,7 @@ public class CalculoImpostos {
     //A classe deve manter em variáveis privadas o valor de cada imposto
     private double ISS = 0.00003;
     private double IOF = 6.38;
-    private double IR;
+    private double IR = 0.08;
     
     public double CalculoISS(double valor){
         double valorTaxaISS = valor * ISS; 
@@ -19,7 +19,7 @@ public class CalculoImpostos {
     }
 
     public double CalculoIR(double valor){
-        double valorTaxaIR = valor - IR; 
+        double valorTaxaIR = valor * IR; 
         return valorTaxaIR;
         
     }
