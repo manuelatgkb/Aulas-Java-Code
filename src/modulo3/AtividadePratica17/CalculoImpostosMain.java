@@ -49,21 +49,21 @@ public class CalculoImpostosMain {
             case 1 :
                 System.out.println("=========Calcula ISS========");
                 double taxasISS = ISS();
-                taxasISS += taxasISS();
+                taxasISS += ISS();
                 System.out.printf("O valor da taxa de ISS foi %.4f \n", taxasISS);
             break;
 
             case 2 :
                 System.out.println("=========Calcula IOF========");
                 double taxasIOF = IOF();
-                taxasISS += taxasIOF();
+                taxasIOF += IOF();
                 System.out.printf("O valor da taxa de IOF foi %.4f \n", taxasIOF);
             break;
 
             case 3: 
                 System.out.println("=========Calcula IR========");
                 double taxasIR = IR();
-                taxasISS += taxasIR();
+                taxasIR += IR();
                 System.out.printf("O valor do IR foi %.4f \n", taxasIR);
             break;
         
@@ -86,12 +86,24 @@ public class CalculoImpostosMain {
     }
 
     static double ISS(){
+        System.out.print("Digite o valor sobre o qual incide o ISS:  ");
+        double valor = Double.parseDouble(sc.nextLine());
+        double taxasISS = calcTaxas.CalculoISS(valor);
+        return taxasISS;
     }
 
     static double IOF(){
+        System.out.print("Digite o valor sobre o qual incide o IOF:  ");
+        double valor = Double.parseDouble(sc.nextLine());
+        double taxasIOF = calcTaxas.CalculoIOF(valor);
+        return taxasIOF;
 
     }
     static double IR(){
+        System.out.print("Digite o valor sobre o qual incide o IR:  ");
+        double valor = Double.parseDouble(sc.nextLine());
+        double taxasIR = calcTaxas.CalculoIR(valor);
+        return taxasIR;
 
     }
 }
