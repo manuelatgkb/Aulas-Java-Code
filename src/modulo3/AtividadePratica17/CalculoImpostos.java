@@ -7,15 +7,20 @@ public class CalculoImpostos {
     private double IOF = 6.38;
     private double IR;
     
-    public double CalculoISS(){
+    public double CalculoISS(double valor){
+        double valorTaxa = valor * ISS; 
+        return valorTaxa;
+    }
+
+    public double CalculoIOF(double valor){
+        double valorTaxa = valor * IOF; 
+        return valorTaxa;
 
     }
 
-    public double CalculoIOF(){
-
-    }
-
-    public double CalculoIR(){
+    public double CalculoIR(double valor){
+        double valorTaxa = valor - IR; 
+        return valorTaxa;
         
     }
 }
