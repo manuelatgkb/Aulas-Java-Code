@@ -1,6 +1,6 @@
 package modulo3.AtividadePratica17;
 
-import java.util.Scanner;      
+import java.util.Scanner;
 
 public class CalculoImpostosMain {
     static Scanner sc = new Scanner(System.in);
@@ -20,26 +20,78 @@ public class CalculoImpostosMain {
        System.out.printf("O valor de todas as taxas foi de %.3f \n", 
        taxasISS, taxasIOF, taxasIR);
        System.out.println();
-
     }
 
-    static void menu(){
+    static boolean retornaMenu(){
+        boolean resposta = false;
+        char resposta_continua;
+
+        do{
+            System.out.println("Deseja voltar ao menu? (S/N)");
+            resposta_continua = sc.nextLine().toUpperCase().charAt(0);
+
+            if(resposta_continua == 'S'){
+                resposta = true;
+            }
+            else if(resposta_continua == 'N'){
+                System.out.println("Até mais !!!");
+            }
+            else{
+                System.out.println("Opção invalida! Digite (S/N)!");
+            }
+        }while(resposta_continua != 'S' && resposta_continua != 'N');
+
+        return resposta;
+    }
+
+    static void opcoesMenu(int opcao){
+        switch(opcao){
+            case 1 :
+                System.out.println("=========Calcula ISS========");
+                double taxasISS = ISS();
+                taxasISS += taxasISS();
+                System.out.printf("O valor da taxa de ISS foi %.4f \n", taxasISS);
+            break;
+
+            case 2 :
+                System.out.println("=========Calcula IOF========");
+                double taxasIOF = IOF();
+                taxasISS += taxasIOF();
+                System.out.printf("O valor da taxa de IOF foi %.4f \n", taxasIOF);
+            break;
+
+            case 3: 
+                System.out.println("=========Calcula IR========");
+                double taxasIR = IR();
+                taxasISS += taxasIR();
+                System.out.printf("O valor do IR foi %.4f \n", taxasIR);
+            break;
+        
+        }
+    }
+
+    static int menu(){
+        int opcao; 
+        do{
         System.out.println("\n ========Calculadora de Impostos========\n");
         System.out.println(" t1 - ISS \n t2 - IOF \n t3 - IR");
         System.out.println("==================");
         System.out.println("Escolha uma opção do menu: ");
-        int opcao = Integer.parseInt(sc.nextLine());
-        System.out.println();
+        opcao = Integer.parseInt(sc.nextLine());
+        if(opcao <1 || opcao >3){
+        System.out.println("Opção inválida. Digite Novamente. \n");
+        }
+        }while(opcao <1 || opcao > 3);
+        return opcao;
     }
 
-    static void feito(){
-        CalculoImpostos calcImpostos = new CalculoImpostos();
+    static double ISS(){
+    }
 
-        double CalculoISS = calcImpostos.CalculoISS(valor);
-        double CalculoIOF = calcImpostos.CalculoIOF(valor);
-        double CalculoIR = calcImpostos.CalculoIR(valor);
+    static double IOF(){
 
-        System.out.printf("Os valores dos impostos são %.2f, %.2f e %.2f \n", CalculoISS, CalculoIOF, CalculoIR );
+    }
+    static double IR(){
 
     }
 }
