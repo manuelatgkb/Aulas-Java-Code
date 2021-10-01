@@ -1,4 +1,4 @@
-package modulo2;
+package modulo2.AtividadesIndividuais;
 
 //import modulo2.CalculadoraTax;
 

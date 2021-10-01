@@ -1,4 +1,4 @@
-package modulo2;
+package modulo2.AtividadesIndividuais;
 
 public class CalculadoraTax{
         private double taxaTransf = 0.00001; 
