@@ -8,19 +8,19 @@ public class CalculoImpostos {
     private double IR;
     
     public double CalculoISS(double valor){
-        double valorTaxa = valor * ISS; 
-        return valorTaxa;
+        double valorTaxaISS = valor * ISS; 
+        return valorTaxaISS;
     }
 
     public double CalculoIOF(double valor){
-        double valorTaxa = valor * IOF; 
-        return valorTaxa;
+        double valorTaxaIOF = valor * IOF; 
+        return valorTaxaIOF;
 
     }
 
     public double CalculoIR(double valor){
-        double valorTaxa = valor - IR; 
-        return valorTaxa;
+        double valorTaxaIR = valor - IR; 
+        return valorTaxaIR;
         
     }
 }
