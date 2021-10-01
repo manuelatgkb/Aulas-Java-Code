@@ -12,5 +12,8 @@ public class AtividadeBanco2 {
         double taxaS4 = calcTaxas.calculaTaxaSaque(50);
         double taxaS5 = calcTaxas.calculaTaxaSaque(50);
 
+        System.out.printf("Os valores de taxa de transferência forma %2f e %.2f \n", taxaT1, taxaT2);
+        System.out.printf("Os valores de taxa de Saque forma %.2f, %.2f, %.2f, %.2f, %.2f \n", taxaS1, taxaS2, taxaS3, taxaS4, taxaS5);
+
     }
 }

@@ -3,6 +3,7 @@ package modulo2.AtividadesIndividuais.ResolucaodaAtividade16;
 public class CalculadoraTaxas2 {
     private double taxaTransferencia = 0.00001;
     private double taxaSaque = 1.3;
+    private int numeroSaques;
 
     public double CalculadoraTaxaTransferencia(double valor){
         double valorTaxa = valor * taxaTransferencia; 
