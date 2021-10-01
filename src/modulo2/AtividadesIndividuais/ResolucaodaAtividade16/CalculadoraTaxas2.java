@@ -10,8 +10,12 @@ public class CalculadoraTaxas2 {
     }
 
     public double calculaTaxaSaque(double valor){
-        double valorTaxa = taxaSaque;
-        
+        numeroSaques++;
+        double valorTaxa = 0;
+
+        if(numeroSaques % 5 == 0){
+            valorTaxa = taxaSaque;
+        }
         return valorTaxa;
     }
 }
