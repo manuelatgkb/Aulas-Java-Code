@@ -7,18 +7,18 @@ public class TelaPrincipalBanco {
 
     cc1.setAgencia(123);
     int ag = cc1.getAgencia();
-    System.out.println(ag);
+    System.out.println("Agência: " + ag);
 
     cc1.setNumero(321);
     int n = cc1.getNumero();
-    System.out.println(n);
+    System.out.println("Número: " + n);
 
     cc1.setCodigoCliente(35);
     int ccl = cc1.getCodigoCliente();
-    System.out.println(ccl);
+    System.out.println("Código Cliente: " + ccl);
 
     cc1.setSaldo(10000.00);
     double s = cc1.getSaldo();
-    System.out.println(s);
+    System.out.println("Saldo: " + s);
     }
 }
