@@ -7,18 +7,18 @@ public class TelaPrincipalLoja {
 
         tpl.setCodigo(321);
         int c = tpl.getCodigo();
-        System.out.println(c);
+        System.out.println("Codigo: " + c);
 
         tpl.setNome("geladeira");
         String n = tpl.getNome();
-        System.out.println(n);
+        System.out.println("Nome: " + n);
 
         tpl.setDescricao("grande");
         String d = tpl.getDescricao();
-        System.out.println(d);
+        System.out.println("Descrição: " + d);
 
         tpl.setValor(1000.00);
         double v = tpl.getValor();
-        System.out.println(v);
+        System.out.println("Valor: " + v);
         }
 }
