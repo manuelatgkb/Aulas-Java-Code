@@ -6,7 +6,7 @@ public class Produto {
     private String descricao;
     private double valor;
 
-    public void setIdade(int codigo){
+    public void setCodigo(int codigo){
         if(codigo>2){
         this.codigo = codigo;
         }
