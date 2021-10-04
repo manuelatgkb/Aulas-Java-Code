@@ -6,7 +6,7 @@ public class TelaPrincipal {
 
         p1.setNome("Maykon");
         String n = p1.getNome();
-        System.out.println(p1.getNome());
+        System.out.println(n);
 
         p1.setSobrenome("Dyego");
         String s = p1.getSobrenome();
