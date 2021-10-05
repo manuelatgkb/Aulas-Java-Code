@@ -26,19 +26,19 @@ public class Universidade {
 
         System.out.printf("Nome : , %s ", f.getNome());
         System.out.printf("Sobrenome :, %s ", f.getSobrenome());
-        System.out.printf("Matricula :, %d", f.getMatricula());
+        System.out.printf("Matricula :, %f", f.getMatricula());
         System.out.printf("Departamento :, %s", f.getDepartamento());
-        System.out.printf("Salário: , %d", f.getSalario());
+        System.out.printf("Salário: , %f", f.getSalario());
 
         System.out.printf("Nome : , %s ", c.getNome());
         System.out.printf("Sobrenome :, %s ", c.getSobrenome());
-        System.out.printf("Matricula :, %d", c.getMatricula());
+        System.out.printf("Matricula :, %f", c.getMatricula());
         System.out.printf("Departamento : %s", c.getDepartamento());
-        System.out.printf("Salário: , %d", c.getSalario());
+        System.out.printf("Salário: , %f", c.getSalario());
 
         System.out.printf("Nome : , %s ", a.getNome());
         System.out.printf("Sobrenome :, %s ", a.getSobrenome());
-        System.out.printf("Matricula :, %d", a.getMatricula());
+        System.out.printf("Matricula :, %f", a.getMatricula());
         System.out.printf("Curso : %s", a.getCurso());
         System.out.printf("Turma : , %s", a.getTurma());
     }
