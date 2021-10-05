@@ -1,20 +1,21 @@
 package modulo3.ATP19;
 
 public class PessoaFisica {
-    private String codigo = " ";
-    private String nome = " ";
-    private String sobrenome = " ";
-    private String idade = " ";
-    private String rg = " ";
-    private String cpf = " ";
+    private String codigo;
+    private String nome;
+    private String sobrenome;
+    private int idade;
+    private String rg;
+    private String cpf;
 
 
-    public String setCodigo (String codigo){
+    public void setCodigo (String codigo){
         if(codigo.length()>2){
         this.codigo = codigo;
     }
+}
     public String getCodigo(){
-        return this.codigo;
+        return codigo;
         }
 
     public void setNome(String nome){
@@ -23,37 +24,37 @@ public class PessoaFisica {
             }
         }
         public String getNome(){
-            return this.nome;
+            return nome;
             
-    }
+        }
         public void setSobrenome(String sobrenome){
             if(sobrenome.length()>2){
             this.sobrenome = sobrenome;
             }
         }
         public String getSobrenome(){
-            return this.sobrenome;
+            return sobrenome;
             }
-        public String setIdade(String idade){
+        public void setIdade(int idade) {
             this.idade  = idade;
         }
-        public String getIdade(){
-            return this.idade;
-            }
+        public int getIdade(){
+            return idade;
+        }
         
-        public String setRg (String rg){
-            if(rg.length()>8){
+        public void setRg (String rg){
             this.rg = rg;
         }
         public String getRg(){
-            return this.rg;
-            }
-        public String setCPF (String cpf){
+            return rg;
+        }
+        public void setCPF (String cpf){
             if(cpf.length()>11){
             this.cpf = cpf;
         }
+    }
         public String getCPF(){
-            return this.cpf;
-            }
+            return cpf;
+        }
 
 }
