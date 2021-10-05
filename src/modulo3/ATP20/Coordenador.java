@@ -18,6 +18,7 @@ public class Coordenador extends Funcionario{
     public String getCoordenador() {
         return coordenador;
     }
+    
     public void setBonus(String bonus) {
         this.bonus = bonus;
     }

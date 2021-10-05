@@ -10,6 +10,7 @@ public class Funcionario extends Pessoa{
     public double getSalario() {
         return salario;
     }
+    
     public void setDepartamento(String departamento) {
         this.departamento = departamento;
     }
