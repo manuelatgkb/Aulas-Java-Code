@@ -1,19 +1,19 @@
 package modulo3.ATP19;
 
 public class PessoaFisica {
-    private int codigo = 0;
+    private String codigo = " ";
     private String nome = " ";
     private String sobrenome = " ";
-    private int idade = 0;
-    private int rg = 0;
-    private int cpf = 0;
+    private String idade = " ";
+    private String rg = " ";
+    private String cpf = " ";
 
 
-    public int setCodigo (int codigo){
+    public String setCodigo (String codigo){
         if(codigo.length()>2){
         this.codigo = codigo;
     }
-    public int getCodigo(){
+    public String getCodigo(){
         return this.codigo;
         }
 
@@ -34,26 +34,25 @@ public class PessoaFisica {
         public String getSobrenome(){
             return this.sobrenome;
             }
-        public int setIdade (int idade){
-            if(idade>2){
-            this.idade = idade;
+        public String setIdade(String idade){
+            this.idade  = idade;
         }
-        public int getIdade(){
+        public String getIdade(){
             return this.idade;
             }
         
-        public int setRg (int rg){
-            if(rg.length()8){
+        public String setRg (String rg){
+            if(rg.length()>8){
             this.rg = rg;
         }
-        public int getRg(){
+        public String getRg(){
             return this.rg;
             }
-        public int setCPF (int cpf){
+        public String setCPF (String cpf){
             if(cpf.length()>11){
             this.cpf = cpf;
         }
-        public int getCPF(){
+        public String getCPF(){
             return this.cpf;
             }
 

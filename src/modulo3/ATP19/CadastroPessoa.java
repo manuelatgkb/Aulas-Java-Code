@@ -20,8 +20,8 @@ public class CadastroPessoa {
 
 
         // percorrendo o array através do laço for it
-        for (String n : pessoas){
-            System.out.println(p);
+        for (String pessoas : pessoas){
+            System.out.println(pessoas);
         }
     }
 }
