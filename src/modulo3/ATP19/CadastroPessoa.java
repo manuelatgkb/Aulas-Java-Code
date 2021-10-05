@@ -9,7 +9,7 @@ _ Imprima todos os dados das 5 pessoas utilizando o laço de repetição foreach
 */
 
 public class CadastroPessoa {
-    public static void main(String[] args) {
+    public static void main(String[] args){
 
         String pessoas = new String[5];
         pessoa1[0] = "Maykon ";
