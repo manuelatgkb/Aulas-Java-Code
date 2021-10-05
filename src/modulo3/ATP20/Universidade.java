@@ -15,6 +15,8 @@ public class Universidade {
         c.setMatricula(88888.000);
         c.setDepartamento("Coordenação");
         c.setSalario(20000.00);
+        c.setBonus(0.1);
+        c.setCurso("Biologia");
 
         Aluno a = new Aluno();
         a.setNome("Clarissa");
@@ -35,6 +37,8 @@ public class Universidade {
         System.out.printf("Matricula :, %f", c.getMatricula());
         System.out.printf("Departamento : %s", c.getDepartamento());
         System.out.printf("Salário: , %f", c.getSalario());
+        System.out.printf("Bonus: %f", c.getBonus());
+        System.out.printf("Curso : %f", c.getCurso());
 
         System.out.printf("Nome : , %s ", a.getNome());
         System.out.printf("Sobrenome :, %s ", a.getSobrenome());

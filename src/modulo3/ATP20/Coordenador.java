@@ -3,7 +3,7 @@ package modulo3.ATP20;
 public class Coordenador extends Funcionario{
     private String curso;
     private String coordenador;
-    private String bonus;
+    private double bonus;
 
     public void setCurso(String curso) {
         this.curso = curso;
@@ -18,11 +18,11 @@ public class Coordenador extends Funcionario{
     public String getCoordenador() {
         return coordenador;
     }
-    
-    public void setBonus(String bonus) {
+
+    public void setBonus(double bonus) {
         this.bonus = bonus;
     }
-    public String getBonus() {
+    public double getBonus() {
         return bonus;
     }
 }
