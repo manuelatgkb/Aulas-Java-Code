@@ -12,12 +12,14 @@ public class Teste {
         cc.setSaldo(2000.00);
         cc.transferencia(100.00);
         cc.setCodigo_cliente("DEF");
-        cc.transferencia(100.00);        
-        cc.transferencia(100.00);
-        cc.transferencia(100.00);
-        cc.transferencia(100.00);
-        cc.transferencia(100.00);
 
-        System.out.printf("\n Código do cliente: %s,\n Saldo da Conta: %f,\n transferência : %f,\n", c.getCodigo_cliente(), c.getSaldo(), 100.00);
+        double transferencia2 = 50;
+        for (int i = 1; i<=10; i++){
+            cc.transferencia(transferencia2);
+            System.out.printf("\n Operação n %d: uma tansferencia de %.2f foi realizada!\n", i, transferencia2);
+            System.out.println("Codigo Cliente: " + cc.getCodigo_cliente());
+            System.out.printf("\n Código do cliente: %s,\n Saldo da Conta: %f,\n transferência : %f,\n", cc.getCodigo_cliente(), cc.getSaldo(), 100.00);
+        }
+        
     }
 }

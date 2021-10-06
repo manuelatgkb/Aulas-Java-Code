@@ -9,10 +9,12 @@ public class ContaCorrente extends Conta{
     @Override
     public void transferencia(double valorTransferencia){
         numero_transferencias ++;
-        super.transferencia(taxa_transferencia);
+        super.transferencia(valorTransferencia);
+        double saldo = this.getSaldo() - taxa_transferencia;
+        this.setSaldo(saldo);
 
         if(numero_transferencias %5 ==0){
-            double saldo = this.getSaldo() - taxa_manutencao;
+            saldo = this.getSaldo() - taxa_manutencao;
             this.setSaldo(saldo);
         }
     }
