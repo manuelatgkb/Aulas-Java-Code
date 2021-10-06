@@ -2,14 +2,14 @@ package modulo3.ATP21;
 public class Teste {
     public static void main(String[] args) {
         Conta c = new Conta();
-        c.setSaldo(10000.00);
+        c.setSaldo(950000.00);
         c.setCodigo_cliente("ABC");
-        System.out.printf("Código do cliente: %s, Saldo da Conta: %.2f ", c.getCodigo_cliente(), c.getSaldo());
+        System.out.printf("Código do cliente: %s \n. Saldo da Conta: %.2f ", c.getCodigo_cliente(), c.getSaldo());
         c.transferencia(180);
-        System.out.printf("Valor da transferência: %.2f, Novo Saldo: %.2f", 180.00, c.getSaldo());
+        System.out.printf("Valor da transferência: %.2f. Novo Saldo: %.2f", 180.00, c.getSaldo());
 
         ContaCorrente cc = new ContaCorrente();
-        cc.setSaldo(2000.00);
+        cc.setSaldo(85000.00);
         cc.transferencia(100.00);
         cc.setCodigo_cliente("DEF");
 
@@ -18,7 +18,7 @@ public class Teste {
             cc.transferencia(transferencia2);
             System.out.printf("\n Operação n %d: uma tansferencia de %.2f foi realizada!\n", i, transferencia2);
             System.out.println("Codigo Cliente: " + cc.getCodigo_cliente());
-            System.out.printf("\n Código do cliente: %s,\n Saldo da Conta: %.2f,\n transferência : %.2f,\n", cc.getCodigo_cliente(), cc.getSaldo(), 100.00);
+            System.out.printf("\n Código do cliente: %s\n, Saldo da Conta: %.2f\n transferência : %.2f\n", cc.getCodigo_cliente(), cc.getSaldo(), 100.00);
         }
         
     }
