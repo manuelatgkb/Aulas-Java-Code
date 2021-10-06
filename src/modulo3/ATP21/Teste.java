@@ -20,6 +20,6 @@ public class Teste {
             System.out.println("Codigo Cliente: " + cc.getCodigo_cliente());
             System.out.printf("\n Código do cliente: %s\n, Saldo da Conta: %.2f\n transferência : %.2f\n", cc.getCodigo_cliente(), cc.getSaldo(), 100.00);
         }
-        
+            System.out.printf("\n Código do cliente: %s\n, Saldo da Conta: %.2f\n", cc.getCodigo_cliente(), cc.getSaldo());
     }
 }
