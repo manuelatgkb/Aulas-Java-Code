@@ -18,6 +18,6 @@ public class Conta {
     }
     public void transferencia(double valor){
         double saldo_final = saldo - valor;
-        saldo = saldo_final;
+        this.saldo -= saldo_final;
     }
 }
