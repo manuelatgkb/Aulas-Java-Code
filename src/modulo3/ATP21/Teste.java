@@ -5,14 +5,18 @@ public class Teste {
         c.setSaldo(950000.00);
         c.setCodigo_cliente("ABC");
         System.out.printf("Código do cliente: %s \n. Saldo da Conta: %.2f ", c.getCodigo_cliente(), c.getSaldo());
+        //realize uma transferência
         c.transferencia(180);
         System.out.printf("Valor da transferência: %.2f. Novo Saldo: %.2f", 180.00, c.getSaldo());
 
         ContaCorrente cc = new ContaCorrente();
         cc.setSaldo(85000.00);
+         //realize uma transferência
         cc.transferencia(100.00);
         cc.setCodigo_cliente("DEF");
-
+        
+//Altere a classe Teste, para realizar mais de 5 transferências na Conta Corrente, 
+//antes de imprimir os resultados.
         double transferencia2 = 50;
         for (int i = 1; i<=10; i++){
             cc.transferencia(transferencia2);
