@@ -30,4 +30,9 @@ public class Aluno {
    public double getMatricula() {
        return this.matricula;
    }
+   @Override
+        public String toString(){
+            String objetoEmString = this.nome + " " + this.sobrenome;
+            return objetoEmString;
+    }
 }
