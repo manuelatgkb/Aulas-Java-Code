@@ -1,10 +1,10 @@
 package modulo3.ATP22.P1;
 
 public class Aluno {
-   public String nome; 
-   public String sobrenome;
-   public int idade;
-   public double matricula;
+   private String nome; 
+   private String sobrenome;
+   private int idade;
+   private double matricula;
 
    public void setNome(String nome) {
        this.nome = nome;
@@ -32,7 +32,7 @@ public class Aluno {
    }
    @Override
         public String toString(){
-            String objetoEmString = this.nome + " " + this.sobrenome;
+            String objetoEmString = this.nome + " " + this.sobrenome + " " + this.idade + " " + this.matricula;
             return objetoEmString;
     }
 }
