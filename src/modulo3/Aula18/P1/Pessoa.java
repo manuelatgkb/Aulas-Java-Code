@@ -8,6 +8,6 @@ public class Pessoa {
     }
 
     public String getNomeCompleto() {
-        return nomeCompleto;
+        return this.nomeCompleto;
     }
 }
