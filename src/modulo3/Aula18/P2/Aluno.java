@@ -1,8 +1,16 @@
 package modulo3.Aula18.P2;
 
 public class Aluno {
+    private int codigo;
     private String nome;
-    private String idade; 
+    private int idade; 
+
+    public Aluno(int codigo) {
+        this.codigo = codigo;
+    }
+    public int getCodigo() {
+        return codigo;
+    }
 
     public void setNome(String nome) {
         this.nome = nome;
@@ -11,10 +19,10 @@ public class Aluno {
         return nome;
     }
 
-    public void setIdade(String idade) {
+    public void setIdade(int idade) {
         this.idade = idade;
     }
-    public String getIdade() {
+    public int getIdade() {
         return idade;
     }
 }
