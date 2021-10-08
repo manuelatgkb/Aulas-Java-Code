@@ -20,9 +20,4 @@ public class Pessoa extends BaseDominio{
     public String getSobrenome() {
         return getSobrenome();
     }
-    @Override
-    public String toString){
-        return this.getId() + " - " + this.nome + " - " + this.sobrenome; 
-        
-    }
 }

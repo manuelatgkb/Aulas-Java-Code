@@ -27,7 +27,7 @@ public class TelaPrincipal {
 
         Pessoa p1 = new Pessoa(id);
         p1.setNome(nome);
-        p1.setSobrenome();
+        p1.setSobrenome(sobrenome);
         pr.create(p1);
 
         for (Pessoa p : pr.read()){
