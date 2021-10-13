@@ -8,8 +8,12 @@ public class Main {
         nome2 = nome2.toUpperCase();
 
         boolean igual = nome.equals(nome2);
-    
+    //não estou salvando a variável
         System.out.println(igual);
+        System.out.println(nome);
+        System.out.println(nome2);
+
+
         
     }
 }
