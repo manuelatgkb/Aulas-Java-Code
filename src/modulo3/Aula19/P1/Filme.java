@@ -14,5 +14,12 @@ public class Filme {
         }else{
             return false;
         }
-   }
+    }
+
+    @Override
+    public String toString() {
+        return this.titulo + ";"
+        + this.anoLancamento + ";"
+        + this.genero;
+    }
 }

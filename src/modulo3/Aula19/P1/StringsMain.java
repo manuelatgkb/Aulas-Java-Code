@@ -1,8 +1,6 @@
 package modulo3.Aula19.P1;
-
-public static main(String[] args) {
-     
-    public static void main(String[] args) {
+     public static void main(String[] args) {
+         
         String nome = "Inêz";
         String nome2 = "inêz";
        // nome = nome.toUpperCase();
