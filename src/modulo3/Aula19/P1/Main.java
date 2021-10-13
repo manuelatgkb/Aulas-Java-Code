@@ -9,7 +9,7 @@ public class Main {
 
         boolean igual = nome.equals(nome2);
     
-        System.out.println(nome.equals(igual));
+        System.out.println(igual);
         
     }
 }
