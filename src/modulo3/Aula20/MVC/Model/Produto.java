@@ -1,6 +1,6 @@
 package modulo3.Aula20.MVC.Model;
 
-public class Produto {
+public class Produto extends BaseModel{
     private String nome;
     private double valor;
     private String marca;

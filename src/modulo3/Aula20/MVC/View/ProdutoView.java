@@ -6,7 +6,7 @@ import modulo3.Aula20.MVC.Controller.ProdutoController;
 import modulo3.Aula20.MVC.Model.Produto;
 
 public class ProdutoView {
-    public static void main(String[] args) {
+    public void executa(String[] args) {
         Produto p = new Produto("TV", 1999.99, "Samsung");
 
         ProdutoController controller = new ProdutoController();
