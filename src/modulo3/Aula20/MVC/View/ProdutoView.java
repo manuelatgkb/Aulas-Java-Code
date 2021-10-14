@@ -7,9 +7,7 @@ import modulo3.Aula20.MVC.Model.Produto;
 
 public class ProdutoView {
     public static void main(String[] args) {
-        Produto p = new Produto();
-        p.nome = "TV";
-        p.valor = 1223.99;
+        Produto p = new Produto("TV", 1999.99, "Samsung");
 
         ProdutoController controller = new ProdutoController();
         controller.salvar(p);
@@ -17,8 +15,7 @@ public class ProdutoView {
         ArrayList<Produto> prods = controller.listar();
 
         for (Produto prodSalvo : prods) {
-            System.out.println(prodSalvo.nome);
-            System.out.println(prodSalvo.valor);
+            System.out.println(prodSalvo);
         }
 
     }
