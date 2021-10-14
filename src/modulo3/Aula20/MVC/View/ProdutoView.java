@@ -1,0 +1,25 @@
+package modulo3.Aula20.MVC.View;
+
+import java.util.ArrayList;
+
+import modulo3.Aula20.MVC.Controller.ProdutoController;
+import modulo3.Aula20.MVC.Model.Produto;
+
+public class ProdutoView {
+    public static void main(String[] args) {
+        Produto p = new Produto();
+        p.nome = "TV";
+        p.valor = 1223.99;
+
+        ProdutoController controller = new ProdutoController();
+        controller.salvar(p);
+
+        ArrayList<Produto> prods = controller.listar();
+
+        for (Produto prodSalvo : prods) {
+            System.out.println(prodSalvo.nome);
+            System.out.println(prodSalvo.valor);
+        }
+
+    }
+}
