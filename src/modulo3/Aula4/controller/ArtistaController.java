@@ -11,8 +11,7 @@ public class ArtistaController {
         artistas.add(a);
     }
 
-    public ArrayList listar(){
+    public ArrayList<Artista> listar(){
         return artistas;
-
     }
 }

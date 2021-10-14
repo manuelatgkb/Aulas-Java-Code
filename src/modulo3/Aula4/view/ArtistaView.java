@@ -3,8 +3,6 @@ package modulo3.Aula4.view;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import javax.swing.plaf.metal.MetalBorders.MenuItemBorder;
-
 import modulo3.Aula4.controller.ArtistaController;
 import modulo3.Aula4.model.Artista;
 
@@ -21,15 +19,19 @@ public class ArtistaView {
                     cadastrar(controller, sc);
                 break;
                 case 2:
-                    ArrayList<Artista> lista = controller.listar();
-                    for(Artista artista : lista){
-                        System.out.printf("Nome: %s, Categoria: %s, Nacionalidade: %s", artista.nome, artista.categoria, artista.nacionalidade);
-                    }
-                    break;
+                    listar(controller);
+
+                break;
             }
         }while(opcao != 0);
     }
 
+    private static void listar(ArtistaController controller){
+        ArrayList<Artista> lista = controller.listar();
+                    for(Artista artista : lista){
+                        System.out.printf("Nome: %s, Categoria: %s, Nacionalidade: %s", artista.nome, artista.categoria, artista.nacionalidade);
+                    }
+    }
     private static void cadastrar(ArtistaController controller, Scanner sc) {
         Artista artista1 = new Artista();
         System.out.println("Digite o nome");
