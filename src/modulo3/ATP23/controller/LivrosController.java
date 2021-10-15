@@ -3,8 +3,6 @@ import java.util.ArrayList;
 
 import modulo3.ATP23.model.Livros;
 
-
-
     //controller
 
     public class LivrosController {
@@ -13,12 +11,12 @@ import modulo3.ATP23.model.Livros;
     //create
 
         public void salvar(Livros livro){
-            livros.add(livro);
+            this.livros.add(livro);
         }
      //read
 
         public ArrayList<Livros> listar(){
-            return livros;
+            return this.livros;
         }
 
         

@@ -27,4 +27,13 @@ public class Livros {
     public String getTitulo() {
         return titulo;
     }
+    @Override
+    public boolean equals(Object obj){
+        Livros outro = (Livros)obj;
+        if(this.id == outro.id){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

@@ -28,7 +28,6 @@ public class CadastroLivrosView {
         }while(opcao != 0);
     }
         
-
         private static void listar(LivrosController controller, Scanner sc){
             ArrayList<Livros> listaLivros = controller.listar();
                         for(Livros livro : listaLivros){
