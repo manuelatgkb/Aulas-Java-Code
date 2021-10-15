@@ -13,12 +13,14 @@ public class Main {
         //Filha filha2 = new Mae();
 
         //A Mae consegue receber a Filha, mas ela descarta ou esconde os dados suplementares da mae.
-        Mae mae3a = filha;
-        Mae mae3 = new Neta();
+        Mae mae3 = filha;
+        Mae mae4 = new Neta();
         Filha filha2 = new Neta();
+        // a mae3 foi gerada através da filha, por isso ela imprimi filha ao invés de mãe.
+        mae3.Falar();
 
-        mae.Falar();
-        filha.Falar();
-        neta.Falar();
+       // mae.Falar();
+       // filha.Falar();
+       // neta.Falar();
     }
 }
