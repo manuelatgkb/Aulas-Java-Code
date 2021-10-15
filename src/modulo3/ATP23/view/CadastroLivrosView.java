@@ -8,14 +8,15 @@ import modulo3.ATP23.model.Livros;
 
 public class CadastroLivrosView {
    // private static int id = 0;
-    public static void main(String[] args) {
-        
-    Scanner sc = new Scanner(System.in);
-        LivrosController controller = new LivrosController();
+   static Scanner sc = new Scanner(System.in);
 
-        int opcao = menu(sc);
+   public static void main(String[] args) {
+        
+        LivrosController controller = new LivrosController();
+        int opcao;
 
         do{
+            opcao = menu(sc);
             switch (opcao) {
                 case 1:
                 cadastrar(controller, sc);
@@ -37,11 +38,11 @@ public class CadastroLivrosView {
 
         private static void cadastrar(LivrosController controller, Scanner sc) {
             Livros livro1 = new Livros();
-            System.out.print("Digite o id do livro");
-            livro1.id = sc.nextInt();
-            System.out.print("Digite o isbn do Livro ");
-            livro1.isbn = sc.nextInt();
-            System.out.print("Digite o autor do livro");
+            System.out.print("\nDigite o id do livro\n");
+            livro1.id = Integer.parseInt(sc.nextLine());
+            System.out.print("\nDigite o isbn do Livro \n");
+            livro1.isbn = Integer.parseInt(sc.nextLine());
+            System.out.print("\nDigite o título do livro\n");
             livro1.titulo = sc.nextLine();
             controller.salvar(livro1);
         }
