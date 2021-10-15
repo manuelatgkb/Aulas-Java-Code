@@ -5,6 +5,6 @@ public class Filha extends Mae{
 
     @Override
     public void Falar() {
-        super.Falar();
+        System.out.println("Classe Filha");
     }
 }
