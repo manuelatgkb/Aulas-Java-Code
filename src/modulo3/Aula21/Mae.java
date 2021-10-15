@@ -1,6 +1,10 @@
 package modulo3.Aula21;
 
 public class Mae {
-    public int id;
+    public String casa;
+
+    public void Falar(){
+        System.out.println("Classe Mae");
+    }
 }
 
