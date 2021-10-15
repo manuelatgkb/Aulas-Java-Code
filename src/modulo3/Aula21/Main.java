@@ -17,8 +17,8 @@ public class Main {
         Mae mae3 = new Neta();
         Filha filha2 = new Neta();
 
-        mae.Falar();
-        filha.Falar();
+        //mae.Falar();
+        //filha.Falar();
         neta.Falar();
     }
 }
