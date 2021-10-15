@@ -6,6 +6,5 @@ public class Neta extends Filha{
     @Override
     public void Falar() {
         System.out.println("Classe Neta");        
-        super.Falar();
     }
 }
