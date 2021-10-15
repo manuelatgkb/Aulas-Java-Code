@@ -19,7 +19,7 @@ public class Main {
         // a mae3 foi gerada através da filha, por isso ela imprimi filha ao invés de mãe.
         mae3.Falar();
 
-       // mae.Falar();
+        mae.Falar();
        // filha.Falar();
        // neta.Falar();
     }
