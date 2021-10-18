@@ -28,5 +28,11 @@ public class Main {
         Object obj1 = comp1;
         Object obj2 = note1;
         Object obj3 = dtop1;
+
+        Computador comp1 = (Computador)obj1;
+        Notebook note1 = (Notebook)obj2;
+        Desktop dtop1 = (Desktop)obj3;
+
+
     }
 }
