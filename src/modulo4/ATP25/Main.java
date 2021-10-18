@@ -33,6 +33,11 @@ public class Main {
         Notebook note1 = (Notebook)obj2;
         Desktop dtop1 = (Desktop)obj3;
 
-
+    imprimir(comp1);
+    imprimir(note1);
+    imprimir(dtop1);
+}
+public static void imprimir(Object obj){
+    System.out.println(obj.toString());
     }
 }
