@@ -5,4 +5,9 @@ public class Computador {
     public String processador; 
     public String discoRigido; 
     public String memoriaRam; 
+
+    @Override
+        public String toString(){
+            return this.marca + ", " + this.processador + "," + this.discoRigido + "," + this.memoriaRam;
+        }
 }
