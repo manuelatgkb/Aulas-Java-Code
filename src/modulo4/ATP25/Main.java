@@ -29,13 +29,13 @@ public class Main {
         Object obj2 = note1;
         Object obj3 = dtop1;
 
-        Computador comp1 = (Computador)obj1;
-        Notebook note1 = (Notebook)obj2;
-        Desktop dtop1 = (Desktop)obj3;
+        Computador comp2 = (Computador)obj1;
+        Notebook note2 = (Notebook)obj2;
+        Desktop dtop2 = (Desktop)obj3;
 
-    imprimir(comp1);
-    imprimir(note1);
-    imprimir(dtop1);
+    imprimir(comp2);
+    imprimir(note2);
+    imprimir(dtop2);
 }
 public static void imprimir(Object obj){
     System.out.println(obj.toString());
