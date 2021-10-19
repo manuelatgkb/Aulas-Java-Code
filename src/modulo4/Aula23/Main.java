@@ -13,8 +13,14 @@ public class Main {
         c1.modelo = "BrasiliaAmarela";
 
         Dados dados = new Dados();
-        dados.salvar(p1);
-        dados.salvar(c1);
+        System.out.println(dados.add(p1));
+        System.out.println(dados.add(c1));
+        System.out.println(dados.add(p1));
+        System.out.println(dados.add(c1));
+        System.out.println(dados.add(p1));
+        
+        
+
 
 
 
