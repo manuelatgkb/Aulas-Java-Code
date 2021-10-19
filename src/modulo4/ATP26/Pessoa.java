@@ -12,9 +12,10 @@ public class Pessoa {
             return true;
         }
         return false;
+    }
 
     @Override
     public String toString(){
-        this.nome +  "," + this.sobrenome + "," + this.idade;
+        this.nome  +  "," + this.sobrenome + "," + this.idade;
     }
 }

@@ -12,6 +12,7 @@ public class Aluno extends Pessoa{
             return true;
         }
         return false;
+    }
 
     @Override
     public String toString(){
