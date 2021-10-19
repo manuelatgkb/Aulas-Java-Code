@@ -11,7 +11,7 @@ public class Dados {
     }
 
     public int size(){
-        return posicaoAtual + 1;
+        return posicaoAtual;
     }
 
     public String add(Object obj){
@@ -54,6 +54,7 @@ public class Dados {
     public void reorganiza(int posicao){
         for (int i = posicao; i < dados.length -1; i++) {
             this.dados[i] = this.dados[i+1];
+        }
         }
 
     public int qtdElementos(){
