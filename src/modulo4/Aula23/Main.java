@@ -12,8 +12,9 @@ public class Main {
         c1.marca = "VW";
         c1.modelo = "BrasiliaAmarela";
 
-        dados[0] = p1;
-        dados[1] = c1;
+        Dados dados = new Dados();
+        dados.salvar(p1);
+        dados.salvar(c1);
 
 
 
