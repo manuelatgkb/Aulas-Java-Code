@@ -7,7 +7,11 @@ public class Dados {
     int tamanhoAtual = 5;
 
     public Dados(){
-    this.dados = new Object[5];
+    this.dados = new Object[tamanhoAtual];
+    }
+
+    public int size(){
+        return posicaoAtual + 1;
     }
 
     public String add(Object obj){
@@ -27,6 +31,22 @@ public class Dados {
     mensagem = "Salvo com sucesso";
     return mensagem;
     }
+
+    public String remove(Object obj){
+        for (int i = 0; i < dados.length; i++) {
+            if( dados[i].equals(obj)){
+                reorganiza(i);
+                posicaoAtual --;
+                return "removido com sucesso";
+            }
+        }
+        return "Não encontrado";
+    }
+
+    public void reorganiza(int posicao){
+        for (int i = posicao; i < dados.length; i++) {
+            this.dados[i] = this.dados[i+1];
+        }
 
     public int qtdElementos(){
         return dados.length;
