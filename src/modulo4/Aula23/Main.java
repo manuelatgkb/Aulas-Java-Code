@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Object[] dados = new Object[10];
         Pessoa p1 = new Pessoa();
         p1.nome = "Jojo";
         p1.sobrenome= "DoCalypso";
