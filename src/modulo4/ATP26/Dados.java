@@ -10,8 +10,8 @@ public class Dados {
     this.dados = new Object[tamanhoAtual];
     }
 
-    public int size(){
-        return posicaoAtual;
+    public void size(){
+        System.out.println("O tamanho da lista é : " + posicaoAtual);
     }
 
     public String add(Object obj){
@@ -27,6 +27,9 @@ public class Dados {
                 dados2[i] = dados[i];
             }
             dados = dados2;
+            
+            dados[posicaoAtual] = obj;
+            posicaoAtual++;
         }
     mensagem = "Salvo com sucesso";
     return mensagem;

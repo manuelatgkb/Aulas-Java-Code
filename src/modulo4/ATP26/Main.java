@@ -40,7 +40,7 @@ public class Main {
         System.out.println(dds.add(p1));
         System.out.println(dds.add(a1));
         System.out.println(dds.add(p1));
-        System.out.println(dds.size());
+        dds.size();
         
         Pessoa px = new Pessoa();
         px.nome = "Luizinho";
