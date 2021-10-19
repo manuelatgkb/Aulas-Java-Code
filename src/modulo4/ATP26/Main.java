@@ -22,9 +22,31 @@ public class Main {
         Aluno a2 = new Aluno();
         a2 = a1;
 
-        Dados dds = new Dados;
+        Dados dds = new Dados();
         dds.add(p1);
         dds.add(a1);
+
+
+        System.out.println(dds.contains(p1));
+        System.out.println(dds.contains(a1));
+
+        System.out.println(dds.add(p1));
+        System.out.println(dds.add(a1));
+
+        System.out.println(dds.contains(p1));
+        System.out.println(dds.contains(a1));
+
+
+        System.out.println(dds.add(p1));
+        System.out.println(dds.add(a1));
+        System.out.println(dds.add(p1));
+        System.out.println(dds.size());
+        
+        Pessoa px = new Pessoa();
+        px.nome = "Luizinho";
+        px.sobrenome = "Patinhas";
+        px.idade = "11";
+        System.out.println(dds.remove(px));
         
     }
 }
