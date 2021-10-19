@@ -6,6 +6,14 @@ public class Aluno extends Pessoa{
     public String curso;
 
     @Override
+    public boolean equals(Object obj){
+        Aluno outroAluno = (Aluno)obj;
+        if( this.matricula.equals(outroAluno.matricula) && this.turma.equals(outroAluno.turma)&& this.curso.equals(outroAluno.curso)){
+            return true;
+        }
+        return false;
+
+    @Override
     public String toString(){
         return this.matricula + "," + this.turma + "," + this.curso;
     }
