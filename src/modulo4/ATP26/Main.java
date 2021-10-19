@@ -7,6 +7,10 @@ public class Main {
         p1.sobrenome = "Patinhas";
         p1.idade = "11";
 
+        Pessoa p2 = new Pessoa();
+        p2 = p1;
+
+
         Aluno a1 = new Aluno();
         a1.nome = "Zezinho";
         a1.sobrenome = "Patinhas";
@@ -14,5 +18,13 @@ public class Main {
         a1.matricula = "123gg";
         a1.curso = "Desenho de Quadrinhos";
         a1.turma = "a";
+
+        Aluno a2 = new Aluno();
+        a2 = a1;
+
+        Dados dds = new Dados;
+        dds.add(p1);
+        dds.add(a1);
+        
     }
 }
