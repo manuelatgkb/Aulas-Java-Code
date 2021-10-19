@@ -43,8 +43,16 @@ public class Dados {
         return "Não encontrado";
     }
 
+    public boolean contains(Object obj){
+        for (int i = 0; i < posicaoAtual; i++) {
+            if(dados[i].equals(obj)){
+                return true;
+            }
+        }
+        return false;
+    }
     public void reorganiza(int posicao){
-        for (int i = posicao; i < dados.length; i++) {
+        for (int i = posicao; i < dados.length -1; i++) {
             this.dados[i] = this.dados[i+1];
         }
 
