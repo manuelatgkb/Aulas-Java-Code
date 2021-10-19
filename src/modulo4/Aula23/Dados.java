@@ -9,6 +9,10 @@ public class Dados {
         this.dados = new Object[tamanhoAtual];
     }
 
+    public int tamanho(){
+        return posicaoAtual + 1;
+    }
+
     public String add(Object obj){
         String mensagem;
 
