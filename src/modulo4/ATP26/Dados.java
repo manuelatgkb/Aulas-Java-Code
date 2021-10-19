@@ -28,5 +28,7 @@ public class Dados {
     return mensagem;
     }
 
-
+    public int qtdElementos(){
+        return dados.length;
+    }
 }
