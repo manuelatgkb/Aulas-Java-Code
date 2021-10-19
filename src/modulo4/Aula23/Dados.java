@@ -32,7 +32,7 @@ public class Dados {
     return mensagem;
     }
     public boolean contains(Object obj){
-        for (int i = 0; i < dados.length; i++) {
+        for (int i = 0; i < posicaoAtual; i++) {
             if(dados[i].equals(obj)){
                 return true;
             }
@@ -40,4 +40,20 @@ public class Dados {
         return false;
     }
 
+    public String remove(Object obj){
+        for (int i = 0; i < dados.length; i++) {
+            if( dados[i].equals(obj)){
+                reorganiza(i);
+                posicaoAtual --;
+                return "removido com sucesso";
+            }
+        }
+        return "Não encontrado";
+    }
+
+    public void reorganiza(int posicao){
+        for (int i = posicao; i < dados.length; i++) {
+            this.dados[i] = this.dados[i+1];
+        }
+    }
 }
