@@ -18,6 +18,8 @@ public class Main {
         System.out.println(dados.add(p1));
         System.out.println(dados.add(c1));
         System.out.println(dados.add(p1));
+        System.out.println(dados.size());
+
         
         
 

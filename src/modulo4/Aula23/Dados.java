@@ -9,7 +9,7 @@ public class Dados {
         this.dados = new Object[tamanhoAtual];
     }
 
-    public int tamanho(){
+    public int size(){
         return posicaoAtual + 1;
     }
 
@@ -27,8 +27,17 @@ public class Dados {
                 dados2[i] = dados[i];
             }
             dados = dados2;
-    }
+        }
     mensagem = "Salvo com sucesso";
     return mensagem;
-}
+    }
+    public boolean contains(Object obj){
+        for (int i = 0; i < dados.length; i++) {
+            if(dados[i].equals(obj)){
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
