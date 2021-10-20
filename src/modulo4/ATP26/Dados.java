@@ -3,7 +3,7 @@ package modulo4.ATP26;
 public class Dados {
     //Crie uma classe Dados com um atributo privado do tipo array de Object.
     private Object[] dados;
-    int posicaoAtual = 0;
+    int posicaoAtual;
     int tamanhoAtual = 5;
 
     public Dados(){
@@ -16,11 +16,12 @@ public class Dados {
 
     public String add(Object obj){
         String mensagem;
-        if(posicaoAtual < dados.length){
-            dados[posicaoAtual] = obj;
+        if(posicaoAtual < this.dados.length){
+            this.dados[posicaoAtual] = obj;
             posicaoAtual ++;
-        }else{
-            tamanhoAtual = tamanhoAtual + 5;
+        }
+        else{
+            tamanhoAtual = this.dados.length + 5;
             Object[] dados2 = new Object[tamanhoAtual];
 
             for (int i = 0; i < dados.length; i++) {
@@ -28,7 +29,7 @@ public class Dados {
             }
             dados = dados2;
             
-            dados[posicaoAtual] = obj;
+            this.dados[posicaoAtual] = obj;
             posicaoAtual++;
         }
     mensagem = "Salvo com sucesso";
@@ -36,29 +37,38 @@ public class Dados {
     }
 
     public String remove(Object obj){
+        int indice = buscar(obj);
         for (int i = 0; i < dados.length; i++) {
-            if( dados[i].equals(obj)){
-                reorganiza(i);
-                posicaoAtual --;
-                return "removido com sucesso";
+            if(indice >=0 ){
+                reorganiza(indice);
             }
+            
         }
         return "Não encontrado";
     }
 
     public boolean contains(Object obj){
-        for (int i = 0; i < posicaoAtual; i++) {
-            if(dados[i].equals(obj)){
-                return true;
-            }
+        int indice = buscar(obj);
+        if(indice >= 0){
+            return true;
         }
         return false;
     }
+
+    private int buscar(Object obj){
+        for (int i = 0; i < dados.length; i++) {
+            if(obj.equals(dados[i])){
+                return i;
+            }
+        }return -1;
+    }
+
     public void reorganiza(int posicao){
         for (int i = posicao; i < dados.length -1; i++) {
-            this.dados[i] = this.dados[i+1];
+            dados[i] = dados[i+1];
         }
-        }
+        posicaoAtual--;
+    }
 
     public int qtdElementos(){
         return dados.length;
