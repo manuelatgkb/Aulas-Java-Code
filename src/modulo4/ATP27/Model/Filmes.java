@@ -1,6 +1,6 @@
 package modulo4.ATP27.Model;
 
-public class Filmes {
+public class Filmes{
     public int id;
     public String titulo;
     public int ano;

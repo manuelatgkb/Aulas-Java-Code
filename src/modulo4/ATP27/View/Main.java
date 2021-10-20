@@ -21,20 +21,25 @@ public class Main {
         f1.titulo = "Les Enfants du Paradis";
         f1.ano = 1978;
 
+        Filmes f2 = new Filmes();
+        f2.id = 47747;
+        f2.titulo = "Sisi";
+        f2.ano = 1978;
+
         Series s1 = new Series();
         s1.id = 53535;
         s1.titulo = "Game of Thrones";
-        s1.ano = 2010;
         s1.temporadas = "7";
 
         Series s2 = new Series();
         s2.id = 53535;
         s2.titulo = "La Casa de papel";
-        s2.ano = 2019;
         s2.temporadas = "4";
 
         cf.create(f1);
         System.out.println("Criado: " + f1.titulo);
+        cf.create(f2);
+        System.out.println("Criado: " + f2.titulo);
         cs.create(s1);
         System.out.println("Criado: " + s1.titulo);
         cs.update(s2);
@@ -56,11 +61,13 @@ public class Main {
     static public void listar(Object obj){
         if(obj instanceof ControllerF){
             ControllerF cf = (ControllerF)obj;
+
             for (Filmes filmes : cf.read()) {
                 System.out.println(filmes);
             }
         }else if (obj instanceof ControllerS){
             ControllerS cs = (ControllerS)obj;
+
             for (Series series : cs.read()) {
                 System.out.println(series);
             }
