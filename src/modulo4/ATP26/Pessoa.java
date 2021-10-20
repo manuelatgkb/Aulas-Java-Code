@@ -7,16 +7,19 @@ public class Pessoa {
 
     @Override
     public boolean equals(Object obj){
-        Pessoa outraPessoa = (Pessoa)obj;
-        if( this.nome.equals(outraPessoa.nome) && this.sobrenome.equals(outraPessoa.sobrenome)&& this.idade.equals(outraPessoa.idade)){
-            return true;
+        if(obj instanceof Pessoa){
+            Pessoa outraPessoa = (Pessoa)obj;
+            if( this.nome.equals(outraPessoa.nome) && this.sobrenome.equals(outraPessoa.sobrenome) && this.idade ==outraPessoa.idade){
+                return true;
+            }
         }
         return false;
     }
 
     @Override
     public String toString(){
-        this.nome  +  "," + this.sobrenome + "," + this.idade;
+        String retorno = this.nome  +  ";" + this.sobrenome + ";" + this.idade;
+        return retorno;
     
     }
 }
