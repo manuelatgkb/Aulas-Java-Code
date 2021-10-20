@@ -8,7 +8,9 @@ public class Main {
         p1.idade = "11";
 
         Pessoa p2 = new Pessoa();
-        p2 = p1;
+        p2.nome = "Huguinho";
+        p2.sobrenome = "Patinhas";
+        p2.idade = "11";
 
 
         Aluno a1 = new Aluno();
@@ -20,8 +22,12 @@ public class Main {
         a1.turma = "a";
 
         Aluno a2 = new Aluno();
-        a2 = a1;
-
+        a2.nome = "Tio Patinhas";
+        a2.sobrenome = "Patinhas";
+        a2.idade = "61";
+        a2.matricula = "256hh";
+        a2.curso = "Desenho de Quadrinhos";
+        a2.turma = "a";
         Dados dds = new Dados();
         dds.add(p1);
         dds.add(a1);
@@ -47,6 +53,5 @@ public class Main {
         px.sobrenome = "Patinhas";
         px.idade = "11";
         System.out.println(dds.remove(px));
-        
     }
 }

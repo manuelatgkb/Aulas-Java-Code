@@ -2,12 +2,12 @@ package modulo4.ATP26;
 
 public class Dados {
     //Crie uma classe Dados com um atributo privado do tipo array de Object.
-    Object[] dados;
+    private Object[] dados;
     int posicaoAtual = 0;
     int tamanhoAtual = 5;
 
     public Dados(){
-    this.dados = new Object[tamanhoAtual];
+        this.dados = new Object[tamanhoAtual];
     }
 
     public void size(){
