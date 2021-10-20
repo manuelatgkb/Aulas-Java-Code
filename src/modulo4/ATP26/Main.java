@@ -48,6 +48,9 @@ public class Main {
         System.out.println(dds.add(p1));
         dds.size();
         
+        boolean existe = dds.contains(p2);
+        System.out.println(existe);
+        
         Pessoa px = new Pessoa();
         px.nome = "Luizinho";
         px.sobrenome = "Patinhas";
