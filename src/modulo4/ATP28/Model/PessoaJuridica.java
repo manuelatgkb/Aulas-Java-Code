@@ -15,4 +15,8 @@ public class PessoaJuridica extends Pessoa{
             return false;
     }
 
+    @Override
+    public String toString() {
+        return "cnpf" + this.cnpj + "cidade" + this.enderecoCom.cidade; 
+    }
 }

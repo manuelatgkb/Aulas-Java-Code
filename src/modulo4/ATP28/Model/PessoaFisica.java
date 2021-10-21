@@ -15,5 +15,8 @@ public class PessoaFisica extends Pessoa{
             return false;
     }
 
-    
+    @Override
+    public String toString() {
+        return "cpf" + this.cpf + "endereço" + this.enderecoRes.logradouro; 
+    }
 }
