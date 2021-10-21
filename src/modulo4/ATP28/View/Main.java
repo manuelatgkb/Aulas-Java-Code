@@ -91,8 +91,6 @@ public class Main {
             for (PessoaJuridica pj : cpj.read()) {
                 System.out.println(pj);
             }
-                
         }
-        
     }
 }
