@@ -1,5 +1,7 @@
 package modulo4.ATP28.Controller;
 
-public class ControllerPJuridica {
+import modulo4.ATP28.Model.PessoaJuridica;
+
+public class ControllerPJuridica extends BaseController <PessoaJuridica> {
     
 }

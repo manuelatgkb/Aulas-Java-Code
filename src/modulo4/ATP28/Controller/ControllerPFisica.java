@@ -1,5 +1,7 @@
 package modulo4.ATP28.Controller;
 
-public class ControllerPFisica {
-    
+import modulo4.ATP28.Model.PessoaFisica;
+
+public class ControllerPFisica extends BaseController <PessoaFisica> {
+
 }
