@@ -13,7 +13,7 @@ public class Main {
         do{
             Endereco end1 = new Endereco();
             end1.enderecoResidencial.logradouro = "Av Brasil";
-            end.enderecoResidencial.numero = "55";
+            end1.enderecoResidencial.numero = "55";
             end1.enderecoResidencial.complemento = "Apto 406b";
             end1.enderecoResidencial.cep = "30140-130";
             end1..enderecoResidencial.cidade = "Belo Horizonte";
