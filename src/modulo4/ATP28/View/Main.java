@@ -16,34 +16,34 @@ public class Main {
         PessoaFisica pf1 = new PessoaFisica();
         pf1.id = 01;
         pf1.cpf = "04026882641";
-        pf1.endereco = "Rua Brasil 55";
+        pf1.enderecoRes.logradouro = "Rua Brasil 55";
 
         PessoaFisica pf2 = new PessoaFisica();
         pf2.id = 03;
         pf2.cpf = "04026882641";
-        pf2.endereco = "Rua Brasil 55";
+        pf2.enderecoRes.logradouro = "Rua Brasil 55";
 
         PessoaFisica pf3 = new PessoaFisica();
         pf3.id = 03;
         pf3.cpf = "04026882641";
-        pf3.endereco = "Rua Brasil 55";
+        pf3.enderecoRes.logradouro = "Rua Brasil 55";
 
 
 //Pessoas Jurídicas: 
         PessoaJuridica pj1 = new PessoaJuridica();
         pj1.id = 02;
         pj1.cnpj = "2828282";
-        pj1.endereco = "Av Castelo Branco";
+        pj1.enderecoCom.logradouro = "Av Castelo Branco";
 
         PessoaJuridica pj2 = new PessoaJuridica();
         pj2.id = 04;
         pj2.cnpj = "2828282";
-        pj2.endereco = "Av Castelo Branco";
+        pj2.enderecoCom.logradouro = "Av Castelo Branco";
 
         PessoaJuridica pj3 = new PessoaJuridica();
         pj3.id = 04;
         pj3.cnpj = "2828282";
-        pj3.endereco = "Av Castelo Branco";
+        pj3.enderecoCom.logradouro = "Av Castelo Branco";
 
 
 //chamando create:
