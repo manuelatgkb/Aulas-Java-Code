@@ -11,6 +11,17 @@ public class Pessoa {
     enderecoCom = new Endereco();
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if(obj instanceof PessoaFisica){
+            PessoaFisica outro = (PessoaFisica)obj;
+            if(this.id == outro.id){
+                return true;
+            }
+        }
+            return false;
+    }
+
 
     @Override
     public String toString() {
