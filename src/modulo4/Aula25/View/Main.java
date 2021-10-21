@@ -36,7 +36,5 @@ public class Main {
         end1.logradouro = "Av JK";
 
         System.out.println(pf.enderecoResidencial.logradouro);
-
-
     }
 }

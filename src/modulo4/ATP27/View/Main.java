@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import javax.swing.event.ListDataEvent;
 
-import modulo4.ATP27.Controller.BaseController;
 import modulo4.ATP27.Controller.ControllerF;
 import modulo4.ATP27.Controller.ControllerS;
 import modulo4.ATP27.Model.Filmes;
@@ -13,7 +12,7 @@ import modulo4.ATP27.Model.Series;
 public class Main {
 
     public static void main(String[] args) {
-        BaseController cf = new BaseController();
+        ControllerF cf = new ControllerF();
         ControllerS cs = new ControllerS();
 
         Filmes f1 = new Filmes();
