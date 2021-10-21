@@ -44,7 +44,8 @@ public class Main {
         pj3.id = 04;
         pj3.cnpj = "2828282";
         pj3.enderecoCom.logradouro = "Av Castelo Branco";
-
+//Cabeçalho
+        System.out.println("_______________Cadastro de Pessoas__________________");
 
 //chamando create:
         cpf.create(pf1);
@@ -66,7 +67,9 @@ public class Main {
         System.out.println("Lista de Pessoas Jurídicas: " + cpj);
 
 //Chamando read 
+        System.out.println("Lendo Pessoas Físicas");
         System.out.println(cpf.read());
+        System.out.println("Lendo Pessoas Jurídicas");
         System.out.println(cpj.read());
 
 
@@ -76,6 +79,8 @@ public class Main {
         cpj.delete(pj1);
         System.out.println("Deletado Pessoa Jurídica 1, Id : " + pj1.id);
     }
+
+    //mensagem final
 
     //Listando
     static public void listar(Object obj){
@@ -92,5 +97,6 @@ public class Main {
                 System.out.println(pj);
             }
         }
+        System.out.println("_______________________Obrigado ______________________");
     }
 }
