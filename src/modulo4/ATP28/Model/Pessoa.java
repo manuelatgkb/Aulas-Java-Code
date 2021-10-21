@@ -22,7 +22,6 @@ public class Pessoa {
             return false;
     }
 
-
     @Override
     public String toString() {
         String retorno = Integer.toString(id);
