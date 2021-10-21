@@ -1,9 +1,5 @@
 package modulo4.ATP27.View;
 
-import java.util.ArrayList;
-
-import javax.swing.event.ListDataEvent;
-
 import modulo4.ATP27.Controller.ControllerF;
 import modulo4.ATP27.Controller.ControllerS;
 import modulo4.ATP27.Model.Filmes;
