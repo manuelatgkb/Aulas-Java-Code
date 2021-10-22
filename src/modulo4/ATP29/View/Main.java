@@ -104,7 +104,7 @@ public static void escolhaMenu(int opcao){
             cadastrar();
             break;
         case 2:
-            listar(cp);
+            listar();
             break;
         case 3:
         atualizar();
@@ -123,7 +123,7 @@ public static void escolhaMenu(int opcao){
     }
 }
 //Listando
-public static void listar(ControllerProdutos cp){
+public static void listar(){
     for (Produtos p : cp.read()) {
         System.out.println(p);
         }
