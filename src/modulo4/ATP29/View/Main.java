@@ -2,35 +2,19 @@ package modulo4.ATP29.View;
 
 import java.util.Scanner;
 
-import modulo4.ATP29.Controller.ControllerCategorias;
 import modulo4.ATP29.Controller.ControllerProdutos;
 import modulo4.ATP29.Model.Categorias;
 import modulo4.ATP29.Model.Produtos;
 
+
 public class Main {
+    static Scanner sc = new Scanner(System.in);
+    static ControllerProdutos cp = new ControllerProdutos();
+
+
     public static void main(String[] args) {
         
-        ControllerProdutos cp = new ControllerProdutos();
-        ControllerCategorias cc = new ControllerCategorias();
-
-        //Criando Produtos
-        Produtos p1 = new Produtos();
-        p1.id = 26262;
-        p1.nome = "Smartphone"; 
-        p1.categoria = "Telefones";
-
-        Produtos p2 = new Produtos();
-        p2.id = 636363;
-        p2.nome = "Smart Tv";
-        p2.categoria = "Televisores";
-
-        Produtos p3 = new Produtos();
-        p3.id = 26262;
-        p3.nome = "Apple Watch"; 
-        p3.categoria = "Relógios";
-
-
-
+/*
         //Criando Categorias
         Categorias c1 = new Categorias();
         c1.id = 28282;
@@ -42,19 +26,37 @@ public class Main {
         c2.marca = "LG";
         c2.descricao = "Televisão esperta";
 
-        //Cabeçalho
-        System.out.println("\n_______________Bem-Vindo ao Cadastro de Produtos__________________\n");
-        System.out.println("\nDigite uma opção: ");
-        System.out.println("1- Criar produto");
-        System.out.println("2 - Listar Produto");
-        System.out.println("3 - Atualizar Produto");
-        System.out.println("4 - Deletar Produto");
-        System.out.println("5 - Sair");
-        System.out.println("____________Obrigado por utilizar o Cadastro de Produtos___________-");
-        Scanner sc = new Scanner(System.in);
+
+        //Criando Produtos
+        Produtos p1 = new Produtos();
+        p1.id = 26262;
+        p1.categoria.id = 2727;
+        p1.nome = "Smartphone"; 
+        p1.categoria = c1;
 
 
-        //Chamando Create: 
+        Produtos p2 = new Produtos();
+        p2.id = 636363;
+        p2.categoria.id = 227;
+        p2.nome = "Smart Tv";
+        p2.categoria = c2;
+
+        Produtos p3 = new Produtos();
+        p3.id = 26262;
+        p3.categoria.id = 373737;
+        p3.nome = "Apple Watch"; 
+        p3.categoria = c2; */
+
+        int opcao;
+
+        do{
+            imprimirCabecalho();
+            opcao = lerOpcao();
+            escolhaMenu(opcao);
+        }while(opcao !=5);
+
+
+        /*Chamando Create: 
         cp.create(p1);
         System.out.println("Produto 1 id: " + p1.id + "Nome: " 
         + p1.nome + "Categoria: " + p1.categoria);
@@ -62,12 +64,6 @@ public class Main {
         System.out.println("Produto 2 id: " + p2.id + "Nome: " 
         + p2.nome + "Categoria: " + p2.categoria);
 
-        cc.create(c1);
-        System.out.println("Categoria 1 id: " + c1.id + "Marca: " 
-        + c1.marca + "Descrição: " + c1.descricao);cp.create(p1);
-        cc.create(c2);
-        System.out.println("Categoria 2 id: " + c2.id + "Marca: " 
-        + c2.marca + "Descrição: " + c2.descricao);
         
         //Chamando Update
         cp.update(p3);
@@ -76,30 +72,95 @@ public class Main {
 
         //Chamando Read
         System.out.println("Lista de produtos " + cp.read());
-        System.out.println("Lista de produtos " + cc.read());
+        listar(cp);
 
 
         //Chamando Delete
         cp.delete(p1);
         System.out.println("Deletado Produto 1, \n ID : " + p1.id);
+    */
+    }
+
+//Cabeçalho
+public static void  imprimirCabecalho (){
+    System.out.println("\n_______________Bem-Vindo ao Cadastro de Produtos__________________\n");
+    System.out.println("\nDigite uma opção: ");
+    System.out.println("1- Criar produto");
+    System.out.println("2 - Listar Produto");
+    System.out.println("3 - Atualizar Produto");
+    System.out.println("4 - Deletar Produto");
+    System.out.println("5 - Sair");
+}
 
 
-        //Listando
-    static public void listar(Object obj){
-        if(obj instanceof ControllerProdutos){
-            ControllerProdutos cp = (ControllerProdutos)obj;
+public static int lerOpcao(){ 
+    System.out.println("__________Digite uma das opções_____________");
+    return Integer.parseInt(sc.nextLine());
+}
 
-            for (Produtos p : cp.read()) {
-                System.out.println(p);
-            }
-        }else if (obj instanceof ControllerCategorias){
-            ControllerCategorias c = (ControllerCategorias)obj;
+public static void escolhaMenu(int opcao){
+    switch (opcao) {
+        case 1: 
+            cadastrar();
+            break;
+        case 2:
+            listar(cp);
+            break;
+        case 3:
+        atualizar();
 
-            for (Categorias c : cc.read()) {
-                System.out.println(c);
-            }
-        }
-
-
+            break;
+        case 4:
+            deletar();
+            break;
+        case 5:
+            System.out.println("_________Obrigado por utilizar nosso cadastro de produtos________");
+            break;
+    
+        default:
+            System.out.println("Opção inválida");
+            break;
     }
 }
+//Listando
+public static void listar(ControllerProdutos cp){
+    for (Produtos p : cp.read()) {
+        System.out.println(p);
+        }
+    }
+
+    public static void  cadastrar() {
+        Produtos p = new Produtos();
+        System.out.printf("Digite o ID: ");
+        p.id = Integer.parseInt(sc.nextLine());
+        System.out.printf("Digite o nome do produto: ");
+        p.nome =sc.nextLine();
+        System.out.printf("Digite a marca do produto: ");
+        p.categoria.marca = sc.nextLine();
+        System.out.printf("Digite a Descrição do produto: ");
+        p.categoria.descricao = sc.nextLine();
+        cp.create(p);
+    }
+
+    public static void atualizar(){
+        Produtos p = new Produtos();
+        System.out.printf("Digite o ID: ");
+        p.id = Integer.parseInt(sc.nextLine());
+        System.out.printf("Digite o nome do produto: ");
+        p.nome =sc.nextLine();
+        System.out.printf("Digite a marca do produto: ");
+        p.categoria.marca = sc.nextLine();
+        System.out.printf("Digite a Descrição do produto: ");
+        p.categoria.descricao = sc.nextLine();
+        cp.update(p);
+
+    }
+
+    public static void deletar(){
+        Produtos p = new Produtos();
+        System.out.printf("Digite o ID: ");
+        p.id = Integer.parseInt(sc.nextLine());
+        cp.delete(p);
+    }
+}
+    
