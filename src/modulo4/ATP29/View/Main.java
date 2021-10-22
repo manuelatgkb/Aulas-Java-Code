@@ -3,7 +3,6 @@ package modulo4.ATP29.View;
 import java.util.Scanner;
 
 import modulo4.ATP29.Controller.ControllerProdutos;
-import modulo4.ATP29.Model.Categorias;
 import modulo4.ATP29.Model.Produtos;
 
 
