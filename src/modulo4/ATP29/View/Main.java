@@ -81,7 +81,7 @@ public class Main {
     }
 
 //Cabeçalho
-public static void  imprimirCabecalho (){
+public static void  imprimirCabecalho(){
     System.out.println("\n_______________Bem-Vindo ao Cadastro de Produtos__________________\n");
     System.out.println("\nDigite uma opção: ");
     System.out.println("1- Criar produto");
