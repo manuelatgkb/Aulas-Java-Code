@@ -13,9 +13,9 @@ public class CalculadoraView {
     public static void main(String[] args) {
         boolean continua = true;
         do{
-        imprimeMenu();
-        int opcao = lerNumero();
-        opcoesMenu(opcao);
+            imprimeMenu();
+            int opcao = lerNumero();
+            opcoesMenu(opcao);
         }while(continua);
     }
 
@@ -24,7 +24,8 @@ public class CalculadoraView {
         boolean continua = true;
         boolean valido = true;
         do{
-            System.out.println("deseja continuar? ");
+        
+            System.out.println("\n Deseja continuar? ");
             try{
                 char resposta = sc.nextLine().toUpperCase().charAt(0);
                 if(resposta == 'S'){
