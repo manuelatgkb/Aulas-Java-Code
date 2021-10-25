@@ -2,6 +2,8 @@ package modulo4.RevisaoAtividade30.View;
 
 import java.util.Scanner;
 
+import javax.security.sasl.SaslException;
+
 import modulo4.RevisaoAtividade30.Controller.CalculadoraController;
 import modulo4.RevisaoAtividade30.Model.Calculadora;
 
@@ -9,9 +11,30 @@ import modulo4.RevisaoAtividade30.Model.Calculadora;
 public class CalculadoraView {
 
     public static void main(String[] args) {
+        boolean continua = true;
+        do{
         imprimeMenu();
-        int opcao = 0;
-        lerNumero();
+        int opcao = lerNumero();
+        opcoesMenu(opcao);
+        }while(continua);
+    }
+
+    private static boolean continuaMenu(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("deseja continuar? ");
+        try{
+            char resposta = sc.nextLine().toUpperCase().charAt(0);
+            if(resposta == 'S'){
+                return true;
+            }
+            else {
+                throw new IllegalArgumentException("O valor deve ser apenas S ou N");
+            }
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }        
+        return continua;
+}
 
     private static void imprimeMenu(){
         System.out.println("+++++++Cabeçalho+++++++");
@@ -46,7 +69,7 @@ public class CalculadoraView {
         int resultado = 0;
 
         System.out.println("Digite um número 1: ");;
-        calc.numero1 = lerNumero();
+        calc.numero1  = lerNumero();
 
         boolean valido = true;
         do{
@@ -82,7 +105,7 @@ public class CalculadoraView {
 
                 break;
         }
-        System.out.printf("O resultado da operação é %d", resultado);
+        System.out.printf("O resultado da operação é %f", resultado);
 
     }
     private static void validaZeroDivisao(int numero){
