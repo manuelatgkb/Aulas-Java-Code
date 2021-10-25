@@ -21,20 +21,30 @@ public class CalculadoraView {
 
     private static boolean continuaMenu(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("deseja continuar? ");
-        try{
-            char resposta = sc.nextLine().toUpperCase().charAt(0);
-            if(resposta == 'S'){
-                return true;
-            }
-            else {
-                throw new IllegalArgumentException("O valor deve ser apenas S ou N");
-            }
-        }catch(Exception e){
-            System.out.println(e.getMessage());
-        }        
-        return continua;
-}
+        boolean continua = true;
+        boolean valido = true;
+        do{
+            System.out.println("deseja continuar? ");
+            try{
+                char resposta = sc.nextLine().toUpperCase().charAt(0);
+                if(resposta == 'S'){
+                    if(resposta == 'S'){
+                        continua = true;
+                    }
+                    else{
+                        continua = false;
+                    }
+                    return true;
+                }
+                else {
+                    throw new IllegalArgumentException("O valor deve ser apenas S ou N");
+                }
+                valido = true;
+            }catch(Exception e){
+                System.out.println(e.getMessage());
+                valido = false;
+        }while(continua);
+    }
 
     private static void imprimeMenu(){
         System.out.println("+++++++Cabeçalho+++++++");
