@@ -6,11 +6,7 @@ public class Calculadora {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         imprimeMenu();
-        try{
-            int opcao = Integer.parseInt(sc.nextLine());
-        }catch(Exception e){
-            System.out.println("Valor inválido.\n O valor deve ser um número inteiro.");
-        }
+        
 
     }
     private static void imprimeMenu(){
@@ -22,5 +18,22 @@ public class Calculadora {
         System.out.println("4-dividir");
         System.out.println("5-Sair");
         System.out.println("Digite uma opção do menu: ");
+    }
+    private static int lerNumero(){
+        Scanner sc = new Scanner(System.in);
+        int opcao = 0;
+        boolean valido;
+        do{
+            try{
+                opcao = Integer.parseInt(sc.nextLine());
+                valido = true;
+            }catch(Exception e){
+                System.out.println("Valor inválido.\n O valor deve ser um número inteiro.");
+                System.out.println("Digite novamente!");
+                valido = false;
+            }
+        }while(!valido);
+
+        return opcao;
     }
 }
