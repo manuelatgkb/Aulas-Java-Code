@@ -18,7 +18,7 @@ public class CalculadoraController {
         return resultado;
     } 
     
-    public double divisao(Calculadora calc){
+    public int divisao(Calculadora calc){
         int resultado = calc.numero1 / calc.numero2;
         return resultado;
     }
