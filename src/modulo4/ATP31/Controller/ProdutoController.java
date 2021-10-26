@@ -1,5 +1,7 @@
 package modulo4.ATP31.Controller;
 
-public class ProdutoController{
+import modulo4.ATP31.Model.Produto;
+
+public class ProdutoController extends BaseController<Produto>{
     
 }
