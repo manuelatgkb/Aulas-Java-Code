@@ -2,13 +2,16 @@ package modulo4.ATP31.View;
 
 import java.util.Scanner;
 
+import modulo4.ATP31.Controller.ProdutoController;
 import modulo4.ATP31.Model.Produto;
 
 public class Main {
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
+    ProdutoController controlle = new ProdutoController();
     imprimeOpcoes();
     int opcao = getNumero();
+    menu(opcao);
     
 
 
@@ -31,22 +34,24 @@ public class Main {
        }while (!valido);
        return numero;
    }
-   public static void menu(int opcao){
+   public static void menu(int opcao, ProdutoController controller){
        switch (opcao) {
            case 1:
             
                System.out.println("______Cadastrar_____");
-               cadastrar();
+               controller.create(cadastrar());
                break;
             case 2:
                System.out.println("_________Atualizar________");
+               controller.update(atualizar());
                break;
             case 3:
                System.out.println("____________Listar_________");
+               controller.read(listar());
                break;
             case 4:
                 System.err.println("___________Deletar_______");
-               
+               controller.remove(deletar(controller));
                break;
             case 5:
                System.out.println("Saindo");
@@ -64,7 +69,7 @@ public class Main {
         p.id = sc.nextLine();
         System.out.println("Digite o nome do produto: ");
         p.nome = sc.nextLine();
-        System.out.println("Digite a categoria do produto: ");
+        System.out.println("Digite o id da categoria do produto: ");
         p.categoria.id = sc.nextLine();
         System.out.println("Digite a descrição do produto: ");
         p.categoria.descricao = sc.nextLine();
@@ -73,13 +78,28 @@ public class Main {
 
         return p;
    }
-   public void atualizar(){
-       
+    public static Produto atualizar(){
+        Produto p = new Produto();
+        System.out.println("Digite o id do produto que você deseja atualizar: ");
+        p.id = sc.nextLine();
+        return p;
     }   
-    public void listar(){
-       
+    public void listar(ProdutoController controller){
+        for(Produto p :controller.read()){
+            System.out.println(p);
+        }
     }
-    public void deletar(){
-       
+    public static Produto deletar(ProdutoController controller){
+        Produto p = new Produto();
+
+        System.out.println("Digite o ID a ser deletado: ");
+        p.id = sc.nextLine();
+        return p;
     }
 }
+
+/*public boolean delete(T obj){
+
+    return this.lista.remove(obj);
+
+}*/

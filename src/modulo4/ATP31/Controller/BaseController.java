@@ -17,15 +17,15 @@ public class BaseController <T> {
     public ArrayList<T> read(){
         return this.lista;
     }
-    //update
+    //Update
     public void update(T obj){
-        if(existe(obj)){
-            delete(obj);
-            create(obj);
+        if(this.existe(obj)){
+            this.delete(obj);
+            this.create(obj);
         }
     }
 
-    //delete
+    //Delete
     public void delete(T obj){
         this.lista.remove(obj);
 
