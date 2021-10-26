@@ -35,7 +35,8 @@ public class Main {
        return numero;
    }
    public static void menu(int opcao, ProdutoController controller){
-       switch (opcao) {
+       
+        switch (opcao) {
            case 1:
             
                System.out.println("______Cadastrar_____");
