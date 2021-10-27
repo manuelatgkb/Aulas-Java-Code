@@ -9,10 +9,13 @@ public class Main {
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
     ProdutoController controlle = new ProdutoController();
-    imprimeOpcoes();
-    int opcao = getNumero();
-    menu(opcao);
-    
+    int opcao;
+
+    do{
+        imprimeOpcoes();
+        opcao = getNumero();
+        menu(opcao, controlle);
+    }while(opcao !=5);
 
 
     }
@@ -48,11 +51,11 @@ public class Main {
                break;
             case 3:
                System.out.println("____________Listar_________");
-               controller.read(listar());
+               listar(controller);
                break;
             case 4:
                 System.err.println("___________Deletar_______");
-               controller.remove(deletar(controller));
+               controller.delete(deletar());
                break;
             case 5: 
                System.out.println("Saindo");
@@ -85,12 +88,12 @@ public class Main {
         p.id = sc.nextLine();
         return p;
     }   
-    public void listar(ProdutoController controller){
+    public static void listar(ProdutoController controller){
         for(Produto p :controller.read()){
             System.out.println(p);
         }
     }
-    public static Produto deletar(ProdutoController controller){
+    public static Produto deletar(){
         Produto p = new Produto();
 
         System.out.println("Digite o ID a ser deletado: ");
