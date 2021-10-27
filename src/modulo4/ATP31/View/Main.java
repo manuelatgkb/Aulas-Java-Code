@@ -43,7 +43,7 @@ public class Main {
            case 1:
             
                System.out.println("______Cadastrar_____");
-               controller.create(cadastrar());
+               controller.create(cadastrar(controller));
                break;
             case 2:
                System.out.println("_________Atualizar________");
@@ -67,21 +67,27 @@ public class Main {
                break;
        }
    }
-   static public Produto cadastrar(){
+   static public Produto cadastrar(ProdutoController controller){
         Produto p = new Produto();
+        boolean valido;
+        do{
+            System.out.println("Digite o id do produto: ");
+            p.id = sc.nextLine();
+            if( controller.existe(p)){
+                System.out.println("Esse Id já existe. Digite um Id diferente.");
+                valido = false;
+            }else {valido = true;}
+        } while(!valido);   
+            System.out.println("Digite o nome do produto: ");
+            p.nome = sc.nextLine();
+            System.out.println("Digite o id da categoria do produto: ");
+            p.categoria.id = sc.nextLine();
+            System.out.println("Digite a descrição do produto: ");
+            p.categoria.descricao = sc.nextLine();
 
-        System.out.println("Digite o id do produto: ");
-        p.id = sc.nextLine();
-        System.out.println("Digite o nome do produto: ");
-        p.nome = sc.nextLine();
-        System.out.println("Digite o id da categoria do produto: ");
-        p.categoria.id = sc.nextLine();
-        System.out.println("Digite a descrição do produto: ");
-        p.categoria.descricao = sc.nextLine();
+            System.out.println("O produto foi cadastrado corretamente");
 
-        System.out.println("O produto foi cadastrado corretamente");
-
-        return p;
+            return p;
    }
     public static Produto atualizar(){
         Produto p = new Produto();
