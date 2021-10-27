@@ -19,9 +19,9 @@ public class BaseController <T> {
     }
     //Update
     public void update(T obj){
-        if(this.existe(obj)){
-            this.delete(obj);
-            this.create(obj);
+        if(existe(obj)){
+            delete(obj);
+            create(obj);
         }
     }
 
