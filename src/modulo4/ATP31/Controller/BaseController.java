@@ -11,6 +11,9 @@ public class BaseController <T> {
     //CRUD
     //Create 
     public void create(T obj){
+        if(existe(obj)){
+            throw new IllegalArgumentException("O Id já existe. Por favor cadastre o produto sob outro id.");
+        }
         this.lista.add(obj);
     }
     //Read 
