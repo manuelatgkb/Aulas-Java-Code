@@ -1,0 +1,94 @@
+body {
+    background:  rgb(230, 191, 191);
+}
+
+#conteudo{
+    background: rgb(212, 120, 120);
+    width: 60%;
+    margin: 20px auto;
+    padding: 25px 40px;
+    text-align: center;
+
+}
+h1{
+    color: rgb(211, 29, 89);
+    font-size: 25px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+h2{
+    margin: 0;
+    text-transform: lowercase;
+    font-size: 20px;
+    color: rgb(211, 29, 89);
+}
+
+form{
+    margin: 30px auto;
+    border: 1px solid rgb(231, 12, 12);
+    width: 40%;
+    padding: 20px 5%;
+    text-align: left;
+
+}
+
+label{
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+input{
+    margin-top: 5px;
+    font-size: 18px;
+    line-height: 28px;
+    width: 70%;
+    border: 1px solid #da1d1dcc;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+input[type = "submit"], button{
+    cursor: pointer;
+    background: #df9c9c;
+    color: #fff;
+
+}
+button{
+    background: rgb(214, 100, 100);
+    border: none;
+    font-size: 20px;
+}
+
+button:hover{
+    color: rgb(235, 41, 15) ;
+    background: rgb(209, 36, 36);
+    border: 1px solid #111010cc;
+}
+
+input[type = "submit"]:hover{
+    cursor: pointer;
+    background: rgb(202, 153, 172);
+    color: rgb(98, 245, 142);
+    border: 1px solid rgb(219, 88, 165);
+
+
+}
+a{
+    color: rgb(160, 229, 197);
+    font-size: 25px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+a:hover{
+    background: #fff;
+    color: rgb(184, 30, 30);
+    padding: 5px 30px;
+
+}
+.labels{
+    width: 20%;
+    border: 1px solid rgb(88, 173, 134);
+    display: inline-block;
+
+}
