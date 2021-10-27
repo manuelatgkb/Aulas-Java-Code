@@ -54,7 +54,7 @@ public class Main {
                 System.err.println("___________Deletar_______");
                controller.remove(deletar(controller));
                break;
-            case 5:
+            case 5: 
                System.out.println("Saindo");
                
                break;

@@ -26,8 +26,8 @@ public class BaseController <T> {
     }
 
     //Delete
-    public void delete(T obj){
-        this.lista.remove(obj);
+    public boolean delete(T obj){
+        return this.lista.remove(obj);
 
     }
     public boolean existe(T obj){
@@ -38,3 +38,4 @@ public class BaseController <T> {
     }
 
 }
+
