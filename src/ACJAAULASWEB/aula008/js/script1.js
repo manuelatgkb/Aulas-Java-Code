@@ -2,6 +2,7 @@ var pessoas= [];
 
 window.onload = function(){
     console.log('Carregando JS')
+    carregaTabela();
 }
 
 function salvar(event){
@@ -24,4 +25,12 @@ function salvar(event){
     
    // console.log(pessoa["nome"]);
     console.log(pessoas);
+}
+
+function carregaTabela(){
+    let tbody = document.getElementById("corpo-tabela");
+    tbody.innerHTML= "";
+    pessoas.forEach(p => {
+        tbody.innerHTML += "<tr>"+ + "<td>"+p["nome"] +"</td>" + "<td>" + p["sobrenome"]+" </td>" +"<td>" + p["idade"]+ "</td>"+ "<tr/>"
+    });
 }
