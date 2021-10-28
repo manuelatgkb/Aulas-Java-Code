@@ -101,3 +101,33 @@ a:hover{
     display: inline-block;
 
 }
+table{
+    width: 90%;
+    margin: 40px auto 20px;
+    border: 1px #000 solid;
+    border-collapse: collapse;
+
+}
+table thead{
+    background: rgb(212, 86, 155);
+    font-size: 14px;
+    text-transform: uppercase;
+    height: 30px;
+}
+table thead th{
+    border: 1px solid #000;
+
+}
+
+table tbody tr{
+    height: 25px;
+    font-size: 14px;
+    color: #fff;
+    border: 1px solid #000;
+}
+
+table tbody tr td{
+padding: 8px 10px;
+border: 1px solid #000;
+
+}
