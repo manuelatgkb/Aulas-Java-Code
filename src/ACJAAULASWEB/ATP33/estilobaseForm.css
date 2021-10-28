@@ -17,6 +17,12 @@ h1{
     margin: 0;
 }
 
+video{
+    width: 50%;
+    height: 40%;
+    
+}
+
 h2{
     margin: 0;
     text-transform: lowercase;
