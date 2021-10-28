@@ -3,15 +3,23 @@
 <head>
     
     <title>JS - Introdução</title>
+    <script src="scripts/inicio.js"></script>
 </head>
     <body>
     <h1>JS -= Introdução</h1>
     <br/>
     <button onclick="olá();" >Salvar</button>
+    <button onclick="alert('Olá, botão clicado 2')">Salvar 2</button>
+    <p onclick="texto()">Olá, seja bem-vindo</p>
+    <button onclick="botao3">Testando funções em um Js externo ao html</button>
 
     <script>
         function ola(){
             alert("Olá, botão clicado");
+        }
+
+        function texto(){
+            console.log("Clicado no Texto do parágrafo");
         }
     </script>
     
