@@ -2,7 +2,10 @@ var pessoas= [];
 
 window.onload = function(){
     console.log('Carregando JS')
-    carregaTabela();
+    //carregaTabela();
+    let pessoa = [];
+    localStorage.setItem("pessoa", JSON.stringify(pessoa));
+
 }
 
 function salvar(event){
@@ -18,7 +21,12 @@ function salvar(event){
     //criando um dicionário, "chave" : valor.
     if(idade.value >= 18){
         pessoa = {"nome": nome.value, "sobrenome": sobrenome.value, "idade": idade.value};
-        localStorage.setItem("pessoa", pessoa);
+        let pessoas = JSON.parse(localStorage.getItem("pessoa"));
+        pessoas.push(pessoa);
+        localStorage.setItem("pessoa", JSON.stringify(pessoas));
+
+
+        //localStorage.setItem("pessoa", JSON.stringify(pessoa));
     }else{
         alert('Sai fora de menor')
     }
