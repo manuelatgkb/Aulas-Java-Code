@@ -1,0 +1,149 @@
+body {
+    background:  rgb(230, 191, 191);
+}
+
+#conteudo{
+    background: rgb(212, 120, 120);
+    width: 60%;
+    margin: 20px auto;
+    padding: 25px 40px;
+    text-align: center;
+}
+
+#opcoes{
+    text-align: left;
+    background: rgb(212, 120, 120);
+    border: 1px solid color rgb(28, 128, 89);
+    border-radius: 5px;
+    display: inline-block;
+}
+
+h1{
+    color: rgb(28, 128, 89);
+    font-size: 50px;
+    text-transform: uppercase;
+    margin: 25 px 0;
+    padding: 20px;
+    text-align: center;
+    font-style: italic;
+}
+
+video{
+    width: 60%;
+    height: 40%;
+    padding: 30px;
+}
+
+h2{
+    margin: 25px;
+    text-transform: uppercase;
+    font-size: 25px;
+    color: rgb(28, 128, 89);
+}
+h3{
+    margin: 25px;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: rgb(28, 128, 89);
+}
+form{
+    margin: 30px auto;
+    border: 1px solid rgb(231, 12, 12);
+    width: 40%;
+    padding: 20px 5%;
+    text-align: left;
+
+}
+
+label{
+    text-transform: uppercase;
+    font-size: 15px;
+    color: rgb(201, 14, 14);
+}
+
+input{
+    margin-top: 5px;
+    font-size: 25px;
+    line-height: 28px;
+    width: 70%;
+    border: 1px solid color: rgb(28, 128, 89);
+    border-radius: 5px;
+    display: inline-block;
+}
+
+input[type = "submit"], button{
+    cursor: pointer;
+    background: #df9c9c;
+    color: #fff;
+
+}
+button{
+    background: rgb(214, 100, 100);
+    border: none;
+    font-size: 20px;
+}
+
+button:hover{
+    color: rgb(235, 41, 15) ;
+    background: rgb(209, 36, 36);
+    border: 1px solid #111010cc;
+}
+
+input[type = "submit"]:hover{
+    cursor: pointer;
+    background: rgb(202, 153, 172);
+    color: rgb(39, 99, 79);
+    border: 1px solid rgb(219, 88, 165);
+
+
+}
+a{
+    color: rgb(39, 99, 79);
+    font-size: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    padding: 15px;
+}
+a:hover{
+    background:#df9c9c;
+    color: rgb(185, 53, 53);
+    padding: 5px 30px;
+
+}
+.labels{
+    width: 25%;
+    border: 2px solid rgb(87, 163, 129);
+    display: inline-block;
+
+}
+table{
+    width: 90%;
+    margin: 40px auto 20px;
+    border: 1px #000 solid;
+    border-collapse: collapse;
+
+}
+table thead{
+    background: rgb(212, 86, 155);
+    font-size: 14px;
+    text-transform: uppercase;
+    height: 30px;
+}
+table thead th{
+    border: 1px solid #000;
+
+}
+
+table tbody tr{
+    height: 25px;
+    font-size: 14px;
+    color: #fff;
+    border: 1px solid #000;
+}
+
+table tbody tr td{
+padding: 8px 10px;
+border: 1px solid #000;
+
+}
