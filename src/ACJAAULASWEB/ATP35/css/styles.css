@@ -5,14 +5,14 @@
 }
 
 body{
-    background: rgb(147, 218, 179);
+    background-color: beige;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 header{
     padding: 5px 2%;
     width: 98%;
-    background:  #a284c0;
+    background: #fff;
     height: 80px;
     color: antiquewhite;
     display: flex;
@@ -21,41 +21,56 @@ header{
 
 }
 
-#logo{
-    padding: 5px;
-    width: 80px;
-    font-size: 20px;
-
+header div img src="logo.jfif"{
+    list-style: none;
+    width: 20px;
+    height: 18px
+    display :left;
 }
 
-#logo a{
-    color: #fff;
-    text-decoration:none;
+
+main div img src="cobra.jfif"{
+    display: :right;
+    list-style: none;
+    border: 1px solid beige;
     
-
 }
-nav ul{
+main div img src="tag1.jfif"{
+    display: :right;
+    list-style: none;
+    border: 1px solid beige;
+    
+}
+
+main div img src="artetrem-15.png"{
+    display: :left;
+    list-style: none;
+    border: 1px solid beige;
+    
+}
+
+footer div img src="lavanderia.jpg"{
     display: flex;
     list-style: none;
     border: 1px solid beige;
     
 }
-nav ul li{
-    margin: 0 5px;
+main nav ul li{
+    margin: 20px 5px;
     cursor: pointer;
     text-align: center;
     line-height: 30px;
     width: 80px;
     height: 35px;
     border-radius:  5px;
-    background-color: beige;
+    background-color: rgb(252, 252, 238);
     border: 1px solid #fff;
-    color: #ae9ec5;
+    color: #251c31;
 
 }
-nav ul li :hover{
+main nav ul li :hover{
     background: #fff;
-    color: #a284c0;
+    color: #e0d7ec;
     
 
 
@@ -69,7 +84,7 @@ main{
 
 footer{
     width: 100%;
-    background: #ae9ec5;
+    background: #e0d7ec;
     height: 200px;
 }
 h1{
