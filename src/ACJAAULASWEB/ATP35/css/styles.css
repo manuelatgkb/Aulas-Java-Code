@@ -6,56 +6,38 @@
 
 body{
     background-color: beige;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 header{
-    padding: 5px 2%;
-    width: 98%;
+    padding: 35px 5%;
+    width: 90%;
     background: #fff;
-    height: 80px;
-    color: antiquewhite;
+    height: 250px;
+    color: black;
     display: flex;
     justify-content: space-between;
+}
 
+p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
 
-header div img src="logo.jfif"{
-    list-style: none;
-    width: 20px;
-    height: 18px
-    display :left;
+header div img{
+   width: 300px;
+   height: 250px;
 }
 
 
-main div img src="cobra.jfif"{
-    display: :right;
-    list-style: none;
-    border: 1px solid beige;
-    
-}
-main div img src="tag1.jfif"{
-    display: :right;
-    list-style: none;
-    border: 1px solid beige;
-    
-}
-
-main div img src="artetrem-15.png"{
-    display: :left;
-    list-style: none;
-    border: 1px solid beige;
-    
-}
-
-footer div img src="lavanderia.jpg"{
+nav ul{
     display: flex;
     list-style: none;
     border: 1px solid beige;
     
 }
-main nav ul li{
+
+nav ul li{
     margin: 20px 5px;
     cursor: pointer;
     text-align: center;
@@ -68,25 +50,39 @@ main nav ul li{
     color: #251c31;
 
 }
-main nav ul li :hover{
+nav ul li :hover{
     background: #fff;
     color: #e0d7ec;
-    
+}
 
 
 main{
-    width: 80%;
+    width: 100%;
     margin: 5px auto;
     background: #fff;
     height: 500px;
 
 }
 
-footer{
+iframe{
     width: 100%;
-    background: #e0d7ec;
-    height: 200px;
+    height: 100%;
 }
+
+
 h1{
+    padding: 2%;
     color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h2{
+    padding: 2%;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h3{
+    padding: 2%;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
