@@ -53,11 +53,11 @@ function salvar(event){
    
    // carregaTabela();
 
-   // console.log(pessoa["nome"]);
-    console.log(livrosClassicos);
-    console.log(livroBarrocos);
-    console.log(livrosNeoclassicos);
-    console.log(livrosContemporaneos);
+   //console.log(pessoa["nome"]);
+   //console.log(livrosClassicos);
+    //console.log(livroBarrocos);
+    //console.log(livrosNeoclassicos);
+    //console.log(livrosContemporaneos);
     console.log(livros)
 }
 
