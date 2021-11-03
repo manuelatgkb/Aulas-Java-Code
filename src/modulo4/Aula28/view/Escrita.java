@@ -6,15 +6,13 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 
-import Repositório_Novo.model.cadastro;
-
 public class Escrita {
     public static void main(String[] args) {
 
         try{
         FileOutputStream fos = new FileOutputStream("dados/molhos.txt");
         OutputStreamWriter osw = new OutputStreamWriter(fos);
-        BufferedWriter bw = new BufferedWriter(fos);
+        BufferedWriter bw = new BufferedWriter(osw);
 
         bw.write("Sugo");
         bw.newLine();
