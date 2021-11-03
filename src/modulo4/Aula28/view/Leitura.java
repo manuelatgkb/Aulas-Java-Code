@@ -19,6 +19,7 @@ public class Main {
             //isr.read(dados, 0, 5);
             //System.out.println(dados);
             BufferedReader br = new BufferedReader(isr);
+            
             while(br.ready()){
                 String linha = br.readLine();
                 System.out.println(linha);
