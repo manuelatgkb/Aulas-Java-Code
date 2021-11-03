@@ -1,23 +1,21 @@
 package view;
 
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-
-import javax.imageio.stream.FileImageInputStream;
 
 public class Leitura{
     public static void main(String[] args) {
     
         try{
-            FileImageInputStream fis = new FileImageInputStream("dados/arquivo1.txt");
-            System.out.println(fis.read());
+            FileInputStream fis = new FileInputStream("dados/arquivo1.txt");
+            //System.out.println(fis.read());
             InputStreamReader isr = new InputStreamReader(fis);
             BufferedReader br = new BufferedReader(isr);
 
-            while(br.readLine()){
+            while(br.ready()){
                 String linha = br.readLine();
                 System.out.println(linha);
             }
