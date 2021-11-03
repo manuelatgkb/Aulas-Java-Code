@@ -29,10 +29,11 @@ public class EscritaOutros {
             Writer osw = new OutputStreamWriter(fos);
             BufferedWriter bw = new BufferedWriter(osw);
         
-            while(br.ready()){
-            String linha = br.readLine();
-            bw.write(linha);
-            bw.newLine();
+            String linha = "";
+            while(br.ready()&& linha.equals("q")){
+                linha = br.readLine();
+                bw.write(linha+ "\n");
+                //bw.flush(); salva imediatamente.
             
         }
         bw.close();
