@@ -1,6 +1,6 @@
 package Repositório_Novo.model;
 
-public class abstrataId {
+abstract class abstrataId {
     public String id;
 
     @Override
