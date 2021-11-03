@@ -1,4 +1,4 @@
-package view;
+package P1.view;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -12,7 +12,7 @@ public class Leitura {
 
         // criando o fluxo de entrada através de um arquivo
         try{
-            FileInputStream fis = new FileInputStream("dados/pratos.txt");
+            FileInputStream fis = new FileInputStream("P1/dados/pratos.txt");
             //System.out.println(fis.read());
             InputStreamReader isr = new InputStreamReader(fis);
             //char[]dados = new char[5];
