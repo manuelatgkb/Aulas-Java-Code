@@ -43,14 +43,12 @@ public class Escrita {
     
             bw.close();
     
-            }catch(FileNotFoundException e){
+    }catch(FileNotFoundException e){
                 System.out.println("Não foi possível encontrar o arquivo.");
-            }catch(IOException e){
+    }catch(IOException e){
                 System.out.println("Não foi possível escrever no arquivo.");
-            }
+        }
     
         }
-    }
     
     }
-}
