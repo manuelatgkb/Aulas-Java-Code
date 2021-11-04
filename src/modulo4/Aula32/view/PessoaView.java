@@ -14,5 +14,6 @@ public class PessoaView{
         for (Pessoa p: pc.read()) {
             System.out.println(p);
         }
+        pc.delete(p1);
     }
 }
