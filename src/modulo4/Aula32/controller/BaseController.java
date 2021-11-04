@@ -3,8 +3,9 @@ package modulo4.Aula32.controller;
 import java.util.ArrayList;
 
 import modulo4.Aula32.dao.BaseDao;
+import modulo4.Aula32.model.BaseModel;
 
-public abstract class BaseController<T> {
+public abstract class BaseController<T extends BaseModel> {
     private ArrayList<T> list;
     private BaseDao<T> dao;
 
@@ -28,7 +29,9 @@ public abstract class BaseController<T> {
         }
     }
     public void delete(T model){
+        pc.delete(T model);
         this.list.remove(model);
+        dao.remove(model);
     }
 
 }
