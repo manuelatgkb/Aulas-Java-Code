@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -17,6 +18,7 @@ import java.util.Scanner;
 public class Leitura{
 
     public static void main(String[] args) {  
+        FileWriter fw = null;
 
         try{
             //InputStream fis = System.in;
@@ -32,6 +34,13 @@ public class Leitura{
                 //br.read("dados/Arquivo1.txt");
                 bw.write(sc.nextLine());
                 bw.newLine();
+                fw = new FileWriter("src/modulo4/ATP39/dados/Arquivo3.txt", true);
+                fw.write("Limao\n");
+                fw.write("Framboesa\n"); 
+                fw.write("Chocolate\n");
+                fw.write("Pistache\n"); 
+                fw.close();
+
             }
             //r.close();
             bw.close();
