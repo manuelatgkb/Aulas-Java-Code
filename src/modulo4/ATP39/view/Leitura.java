@@ -7,31 +7,33 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.io.OutputStreamWriter;
+import java.io.Writer;
 import java.util.Scanner;
 
 public class Leitura{
 
-    public static void main(String[] args) {    
-        try {
-            Scanner sc = new Scanner(new File("P3/dados/molho.txt"));
-            while(sc.hasNextLine()){
-                System.out.println(sc.nextLine());
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+    public static void main(String[] args) {  
 
         try{
-            FileOutputStream fos = new FileOutputStream("dados/arquivo2.txt");
-            OutputStreamWriter osw = new OutputStreamWriter(fos);
+            //InputStream fis = System.in;
+            //Reader r = new InputStreamReader(fis);
+            //BufferedReader br = new BufferedReader(r);
+
+            OutputStream fos = new FileOutputStream("src/modulo4/ATP39/dados/Arquivo2.txt");
+            Writer osw = new OutputStreamWriter(fos);
             BufferedWriter bw = new BufferedWriter(osw);
-    
-            bw.write("Algumas Linhas");
-            bw.newLine();
-            bw.write("Mais algumas linhas");
-    
+
+            Scanner sc = new Scanner(new File("src/modulo4/ATP39/dados/Arquivo1.txt"));
+            while(sc.hasNextLine()){
+                //br.read("dados/Arquivo1.txt");
+                bw.write(sc.nextLine());
+                bw.newLine();
+            }
+            //r.close();
             bw.close();
     
             }catch(FileNotFoundException e){

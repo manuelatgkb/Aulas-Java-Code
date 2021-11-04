@@ -7,11 +7,11 @@ public class Escrita2 {
     public static void main(String[] args) {
         PrintWriter ps = null;
         try {
-            ps = new PrintWriter("P3/dados/molho.txt");
-            ps.println("Sugo");
-            ps.println("Branco"); 
-            ps.println("Bolonhesa");
-            ps.println("Madeira"); 
+            ps = new PrintWriter(".txt");
+            ps.println("123");
+            ps.println("456"); 
+            ps.println("789");
+            ps.println("101"); 
         } catch (FileNotFoundException e) {
             System.out.println("Nao foi possivel encontrar o arquivo");
         } finally{

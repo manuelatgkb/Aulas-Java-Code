@@ -10,7 +10,7 @@ public class Escrita {
     public static void main(String[] args) {
         
     try{
-        FileOutputStream fos = new FileOutputStream("dados/arquivo2.txt");
+        FileOutputStream fos = new FileOutputStream("src/modulo4/Arquivo2.txt");
         OutputStreamWriter osw = new OutputStreamWriter(fos);
         BufferedWriter bw = new BufferedWriter(osw);
 
