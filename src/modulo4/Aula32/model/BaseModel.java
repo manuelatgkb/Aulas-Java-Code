@@ -1,4 +1,5 @@
-package model;
+package modulo4.Aula32.model;
+
 
 public abstract class BaseModel{
     public int id;
