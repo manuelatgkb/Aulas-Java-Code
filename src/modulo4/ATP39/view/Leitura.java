@@ -31,7 +31,8 @@ public class Leitura{
 
             Scanner sc = new Scanner(new File("src/modulo4/ATP39/dados/Arquivo1.txt"));
             while(sc.hasNextLine()){
-                //br.read("dados/Arquivo1.txt");
+                //r.read("dados/Arquivo1.txt");
+                System.out.println("Escreva algo");
                 bw.write(sc.nextLine());
                 bw.newLine();
                 fw = new FileWriter("src/modulo4/ATP39/dados/Arquivo3.txt", true);
@@ -40,7 +41,6 @@ public class Leitura{
                 fw.write("Chocolate\n");
                 fw.write("Pistache\n"); 
                 fw.close();
-
             }
             //r.close();
             bw.close();

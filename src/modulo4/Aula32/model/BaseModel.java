@@ -12,5 +12,11 @@ public abstract class BaseModel{
             }
         }
         return false;
+
     }
+    @Override
+    public String toString() {
+        return Integer.toString(this.id);
+    }
+    
 }
