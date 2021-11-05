@@ -1,4 +1,9 @@
-package modulo4.ATP40;
+package modulo4.ATP40.view;
+
+import modulo4.ATP40.IPontoTuristicoCrud;
+import modulo4.ATP40.PontoTuristico;
+import modulo4.ATP40.PontoTuristicoArquivo;
+import modulo4.ATP40.PontoTuristicoLista;
 
 public class View {
     public static void main(String[] args) {
