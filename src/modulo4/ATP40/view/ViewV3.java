@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import modulo4.ATP40.Empresa;
+import modulo4.ATP40.ex1.Empresa;
 
 public class ViewV3 {
     private static String fileName = "P5/ex1/empresas.csv";

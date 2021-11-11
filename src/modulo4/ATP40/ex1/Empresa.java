@@ -1,4 +1,4 @@
-package modulo4.ATP40;
+package modulo4.ATP40.ex1;
 
 public class Empresa {
     public String nome;

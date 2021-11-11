@@ -6,7 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-import modulo4.ATP40.Empresa;
+import modulo4.ATP40.ex1.Empresa;
 
 public class ViewV1 {
     public static void main(String[] args) {
