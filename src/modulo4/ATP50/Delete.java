@@ -10,10 +10,10 @@ public class Delete {
     try {
 
         int id = 1; 
+        String sql = "DELETE FROM categoria WHERE id = ?";
 
         Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "123456");
         
-        String sql = "DELETE FROM pessoa WHERE id = ?";
         PreparedStatement prepStatement = conn.prepareStatement(sql);
         prepStatement.setInt(1, id);
 
