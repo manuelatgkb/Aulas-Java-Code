@@ -6,11 +6,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import modulo3.Aula20.MVC.Model.Categoria;
+
 public class Create {
     public static void main(String[] args) {
-        try (Connection conn = DriverManager.getConnection){
-            Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "123456");
-
+        try (Connection conn = new ConnectionFactory().getConnection()){
+            Categoria cat1 = new Categoria("teste");
+            
             PreparedStatement prepstatement = conn.prepstatement(sql);
             String sql = "INSERT INTO categoria(nome, descricao) VALUES('nome', 'id')";
             prepstatement.execute(sql, prepstatement.RETURN_GENERATED_KEYS);
