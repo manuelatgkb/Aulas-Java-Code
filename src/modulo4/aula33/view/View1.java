@@ -7,20 +7,21 @@ import java.sql.SQLException;
 
 public class View1 {
     public static void main(String[] args) {
-        try{
+        try(Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "123456"))
+        {
             int idDeletado =26;
+            String sql = "DELETED FROM categoria WHERE id = ?";
 
-            Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "123456");
-
-            String sql = "DELETE FROM categoria WHERE id = ?";
-            PreparedStatement preparedStatement = conn.prepareStatement(sql);
-            preparedStatement.setInt(1, idDeletado);
+            try(PreparedStatement preparedStatement = conn.prepareStatement(sql);)
+            {
+                preparedStatement.setInt(1, idDeletado);
             
-            preparedStatement.execute();
-            int linhaAfetadas = preparedStatement.getUpdateCount();
-            System.out.println(linhaAfetadas);
-
-            conn.close();
+                preparedStatement.execute();
+                int linhaAfetadas = preparedStatement.getUpdateCount();
+                System.out.println(linhaAfetadas);
+            }catch (Exception e){
+                e.printStackTrace();
+            
         }catch(SQLException e){
             e.printStackTrace();
         }
