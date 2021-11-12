@@ -12,7 +12,7 @@ public class Read {
         try {
             Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "123456");
 
-            PreparedStatement prepStatement = conn.prepareStatement(sql);
+            PreparedStatement prepStatement = conn.prepareStatement();
             String sql = "SELECT * FROM categoria";
             prepStatement.execute(sql);
             ResultSet result = prepStatement.getResultSet();
