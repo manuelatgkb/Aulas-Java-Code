@@ -14,9 +14,9 @@ public class View5 {
             Statement statement = conn.createStatement();
             String sql = "DELETE FROM pessoa where id >10";
             
-            statement.execute(sql, statement.RETURN_GENERETED_KEYS);
+            statement.execute(sql, Statement.RETURN_GENERETED_KEYS);
             
-            ResultSet ids = statement.getGeneratedKeys();
+            ResultSet ids = Statement.getUpdateCount(linhasAfetadas);
 
             while(ids.next()){
                 int id = ids.getInt(1);

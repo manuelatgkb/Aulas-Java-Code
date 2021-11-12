@@ -16,7 +16,7 @@ public class View3 {
             
             statement.execute(sql, statement.RETURN_GENERETED_KEYS);
             
-            ResultSet ids = statement.getGeneratedKeys();
+            ResultSet ids = Statement.getGeneratedKeys();
 
             while(ids.next()){
                 int id = ids.getInt(1);

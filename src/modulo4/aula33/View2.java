@@ -14,7 +14,7 @@ public class View2 {
             Connection conn = DriverManager.getConnection(jdbc:postgresql: , xxxx, password);
             Statement statement = conn.createStatement();
             statement.execute("SELECT * FROM pessoa");
-            ResultSet result = statement.getResultSet();
+            ResultSet result = Statement.getResultSet();
 
             while(result.next()){
                 int id = result.getInt("id");
