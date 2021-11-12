@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 public class Create {
     public static void main(String[] args) {
-        try {
+        try (Connection conn = DriverManager.getConnection){
             Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "123456");
 
             PreparedStatement prepstatement = conn.prepstatement(sql);
