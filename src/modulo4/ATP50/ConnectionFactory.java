@@ -22,7 +22,7 @@ public ConnectionFactory(){
     pool.setjdbcURL(this.url);
     pool.setUser(this.user);
     pool.setPassword(this.password);
-    pool.setMaxPoolSize(10);
+    pool.setMaxPoolSize(50);
     this.dataSource = pool;
 
 }
