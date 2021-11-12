@@ -7,13 +7,12 @@ import src.modulo4.aula33.utils.ConnectionFactory;
 
 public class View2 {
     public static void main(String[] args) {
-        try {
+        try (            Connection conn = new ConnectionFactory().getConnection();
+        ) {
             String nome = "UpdatePrepStatment";
             int id = 25;
-            Connection conn = new ConnectionFactory().getConnection();
-            
+            try(PreparedStatement preparedStatement = conn.prepareStatement(sql)){
             String sql = "UPDATE categoria SET nome = ? WHERE id =?";
-            PreparedStatement preparedStatement = conn.prepareStatement(sql);
             preparedStatement.setString(1, nome);
             preparedStatement.setInt(2, id);
 
@@ -21,8 +20,10 @@ public class View2 {
 
             int linhaAfetadas = preparedStatement.getUpdateCount();
             System.out.println(linhaAfetadas);
+            }catch(Exception e){
+                e.printStackTrace();
+            }
 
-            conn.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
