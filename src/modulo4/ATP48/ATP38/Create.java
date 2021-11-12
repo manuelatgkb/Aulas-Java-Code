@@ -13,7 +13,7 @@ public class Create {
             Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "123456");
 
             PreparedStatement prepstatement = conn.prepstatement(sql);
-            String sql = "INSERT INTO categoria(nome, descricao) VALUES('bebidas', 'alcoolicas')";
+            String sql = "INSERT INTO categoria(nome, descricao) VALUES('nome', 'id')";
             prepstatement.execute(sql, prepstatement.RETURN_GENERATED_KEYS);
             ResultSet info = prepstatement.getGeneratedKeys();
 
