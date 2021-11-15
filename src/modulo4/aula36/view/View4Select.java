@@ -8,24 +8,19 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import modulo3.Aula20.MVC.Model.Categoria;
-import src.modulo4.aula33.utils.ConnectionFactory;
+import modulo4.aula36.utils.CategoriaDao;
 
 public class View4Select {
     public static void main(String[] args) {
         try(Connection conn = new ConnectionFactory().getConnection())
         {
-            PreparedStatement prepStatement = conn.prepareStatement("SELECT * FROM categoria");
-            prepStatement.execute();
-            ResultSet result = prepStatement.getResultSet();
+           CategoriaDao dao = new CategoriaDao(conn);
 
-            while(result.next()){
-                Categoria cat = new Categoria(result.getInt("id"), result.getString("nome"));
-                System.out.println(cat);
-            }
-
+           for(Categoria c : dao.list()){
+               System.out.println(c);
+           }
         }catch(SQLException e){
-            System.out.println("Não foi posível conectar");
-
+            e.printStackTrace();
         }
         
     }
