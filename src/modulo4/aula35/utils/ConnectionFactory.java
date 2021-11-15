@@ -26,9 +26,8 @@ public class ConnectionFactory {
             pool.setPassword(this.password);
             pool.setMaxPoolSize(10);
             this.dataSource = pool;
-            
-        }
 
+        }
 
         public Connection getConnection() throws SQLException{
             return DriverManager.getConnection(this.url, this.user, this.password);
