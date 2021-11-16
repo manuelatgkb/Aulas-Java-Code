@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import modulo4.aula36.model.Categoria;
 import src.modulo4.aula33.utils.ConnectionFactory;
 
 public class View4 {
@@ -18,14 +19,17 @@ public class View4 {
             ResultSet result = prepStatement.getResultSet();
 
             while(result.next()){
+                Categoria model = new Categoria();
                 int id = result.getInt("id");
                 String nome = result.getString("nome");
-                System.out.printf("%d - %s",id, nome, sobrenome);
+
+                model.setId(result.getInt("id"));
+                model.setNome(result.getString("nome"));
+                System.out.printf("%d - %s", model.getId(), model.getNome());
             }
 
         }catch(SQLException e){
-            System.out.println("Não foi posível conectar");
-
+            e.printStackTrace();
         }
         
     }
