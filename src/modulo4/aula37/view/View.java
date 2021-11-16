@@ -5,25 +5,27 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import modulo4.aula35.utils.ConnectionFactory;
+
 public class View {
     public static void main(String[] args) {
         
-        try{
+        try(Connection conn = new ConnectionFactory().getConnection())
+        {
             int id = 2;
             String nome = "UpdatePrepStatement";
-            Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost/postgres", "postgres", "123456");
-            
-            String sql = "Delete FROM categoria WHERE id = ?";
-            PreparedStatement prepstatement = conn.prepareStatement(sql);
+            try(PreparedStatement prepstatement = conn.prepareStatement(sql))
+            {
             prepstatement.setInt(1, id);
-
             prepstatement.execute();
             int linhasAfetadas = prepstatement.getUpdateCount();
             System.out.println(linhasAfetadas);
         
-            conn.close();
         }catch(SQLException e){
             e.printStackTrace();
         }
+    }catch(SQLException e){
+        e.printStackTrace();
     }
+}
 }
