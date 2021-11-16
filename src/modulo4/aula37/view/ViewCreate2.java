@@ -1,0 +1,51 @@
+package modulo4.aula37.view;
+
+import java.awt.Container;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+
+import modulo3.ExerciciosExtra.R10.Domain.Categoria;
+import modulo4.aula37.view.dao.CategoriaDao;
+
+public class ViewCreate2 extends JFrame{
+    public ViewCreate2(){
+        super("Categorias");
+        setLayout(null);
+        
+        Container container = getContentPane();
+        JLabel lbNome = new JLabel("Nome:");
+        lbNome.setBounds(10,10,50,20);
+
+        JTextField txtNome = new JTextField();
+        txtNome.setBounds(70, 10, 250, 20);
+
+        JButton btnSalvar = new JButton("Salvar");
+        txtNome.setBounds(10, 40, 100, 20);
+
+        btnSalvar.addActionListener(new aActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                JOptionPane.showMessageDialog(Container, "Botao Clicado");
+                Categoria model = new Categoria();
+                model.setNome(txtNome.getText());
+                salvar(model);
+            }
+        });
+
+        container.add(lbNome);
+        container.add(txtNome);
+        container.add(btnSalvar);
+
+
+        setSize(800, 600);
+        setLocationRelativeTo(null);
+        setVisible(true);
+    }
+    private void salvar(Categoria model){
+        CategoriaDao catdao = new CategoriaDao();
+    }
+}

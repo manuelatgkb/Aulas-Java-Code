@@ -6,30 +6,32 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Scanner;
+
+import modulo4.aula37.utils.Categoria;
 
 import src.modulo4.Aula37.utils.Categoria;
 import src.modulo4.Aula37.utils.ConnectionFactory;
 
 public class View3Create {
     public static void main(String[] args) {
-        try(Connection conn = new ConnectionFactory().getConnection()){
-            Categoria model = new Categoria();
-            model.setNome("Test Model Insert");
-            
-            String sql = "INSERT INTO categoria(nome)values(?)";
-            PreparedStatement prepStatement = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            prepStatement.setString(1, nome);
-            
-            prepStatement.execute();
-            ResultSet ids = prepStatement.getGeneratedKeys();
+        Categoria model = new Categoria();
+        Categoria model2 = new Categoria();
 
-            while(ids.next()){
-                int id = ids.getInt("id");
-                System.out.println(id);
-            }
+        try(Scanner sc = new Scanner(System.in))
+        {
 
-        }catch(SQLException e){
-            e.printStackTrace();
+            System.out.print("Digite a categoria");
+            model.setNome(sc.nextLine());
+
+            System.out.print("Digite a categoria 2");
+            model2.setNome(sc.nextLine());
+        }catch(Exception e){
+            System.out.println("Erro ao ler");
+
         }
+            dao.insert(model);
+            dao.insert(model2);
+
     }
 }
