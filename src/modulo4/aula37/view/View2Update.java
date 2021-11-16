@@ -1,16 +1,13 @@
 package modulo4.aula37.view;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.util.Scanner;
 
 import modulo4.aula37.utils.Categoria;
-import src.modulo4.aula35.utils.ConnectionFactory;
+import modulo4.aula37.view.dao.CategoriaDao;
 
 public class View2Update {
     public static void main(String[] args) {
+        CategoriaDao dao = new CategoriaDao();
         Categoria model = new Categoria();
         try (Scanner sc = new Scanner(System.in)){
             System.out.printf("\n Digite o id a ser alterado");
@@ -24,23 +21,9 @@ public class View2Update {
         } catch (Exception e) {
             System.out.println("Não foi possível ler");
         }
-        update(model);
+        int linhasAfetadas = dao.update(model);
+        System.out.println(linhasAfetadas);  
+
     }
 
-    private static void update(Categoria model){
-        try(Connection conn = new ConnectionFactory().getConnection()){
-           
-            String sql = "UPDATE categoria SET nome = ? where id = ?";
-            PreparedStatement prepStatement = conn.prepareStatement(sql);
-            prepStatement.setString(1, model.getNome);
-            prepStatement.setInt(2, model.getId());
-
-            prepStatement.execute(sql);
-                
-            int linhasAfetadas = prepStatement.getUpdateCount();
-            System.out.println(linhasAfetadas);  
-        }catch(SQLException e){
-            e.printStackTrace();
-        }
-    }
 }
