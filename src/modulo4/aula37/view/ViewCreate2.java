@@ -29,7 +29,7 @@ public class ViewCreate2 extends JFrame{
         btnSalvar.addActionListener(new aActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
-                JOptionPane.showMessageDialog(Container, "Botao Clicado");
+                JOptionPane.showMessageDialog(container, "Botao Clicado");
                 Categoria model = new Categoria();
                 model.setNome(txtNome.getText());
                 salvar(model);
@@ -46,6 +46,8 @@ public class ViewCreate2 extends JFrame{
         setVisible(true);
     }
     private void salvar(Categoria model){
-        CategoriaDao catdao = new CategoriaDao();
+        CategoriaDao dao = new CategoriaDao();
+        dao.insert(model);
+        JOptionPane.showMessageDialog(container, "Categoria:" + model.getNome()+ "Salva com sucesso!");
     }
 }
