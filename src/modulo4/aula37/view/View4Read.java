@@ -6,13 +6,22 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
-import modulo4.aula36.model.Categoria;
+import modulo4.aula37.utils.Categoria;
 import src.modulo4.aula33.utils.ConnectionFactory;
 
-public class View4 {
+public class View4Read {
     public static void main(String[] args) {
-        try(Connection conn = new ConnectionFactory().getConnection());
+        ArrayList<Categoria> list = new ArrayList<Categoria>();
+        for (Categoria c ; read()){
+            System.out.printf("%d = %s\n" , c.getId(), c.getNome());
+        }
+    }
+
+    private static ArrayList<Categoria>read(){
+
+        try(Connection conn = new modulo4.aula37.utils.ConnectionFactory().getConnection())
         {
             PreparedStatement prepStatement = conn.prepareStatement("SELECT FROM *categoria");
             prepStatement.execute("SELECT * FROM pessoa");

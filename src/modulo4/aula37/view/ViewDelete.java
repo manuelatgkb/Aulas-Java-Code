@@ -4,32 +4,28 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.Scanner;
 
-import modulo4.aula35.utils.ConnectionFactory;
+import modulo4.aula37.utils.Categoria;
+import modulo4.aula37.view.dao.CategoriaDao;
 
 public class ViewDelete {
     public static void main(String[] args) {
-        
-        try(Connection conn = new ConnectionFactory().getConnection())
-        {
-            Categoria model = new Categoria();
-            model.setId(2);
-            String sql = 
+        CategoriaDao dao = new CategoriaDao();
+        Categoria model = new Categoria();
 
-            int id = 2;
-            String nome = "DeletePrepStatement";
-            try(PreparedStatement prepstatement = conn.prepareStatement(sql))
-            {
-            prepstatement.setInt(1, id);
-            prepstatement.execute();
-            int linhasAfetadas = prepstatement.getUpdateCount();
-            System.out.println(linhasAfetadas);
-        
-        }catch(SQLException e){
-            e.printStackTrace();
+        try(Scanner sc = new Scanner(System.in);) {
+            System.out.printf("\nDigite o id a ser deletado: ");
+            int id = Integer.parseInt(sc.nextLine());
+            model.setId(id);
+            
+        } catch (Exception e) {
+            System.out.println("Não foi possível ler");
         }
-    }catch(SQLException e){
-        e.printStackTrace();
+
+    
+
+        int lAfetadas =  model.delete(model);
+        System.out.println(lAfetadas);
     }
-}
 }
