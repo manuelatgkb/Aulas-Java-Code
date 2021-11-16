@@ -1,8 +1,10 @@
 package modulo4.aula37.view.dao;
 
+import java.sql.SQLException;
+
 public class CategoriaDao {
     public static void main(String[] args) {
-        private static void insert(Categoria model){
+        public void insert(Categoria model){
             try(Connection conn = new ConnectionFactory().getConnection()){
                 
                 String sql = "INSERT INTO categoria(nome)values(?)";
@@ -19,7 +21,6 @@ public class CategoriaDao {
     
             }catch(SQLException e){
                 e.printStackTrace();
-            }
         }
     }
 }

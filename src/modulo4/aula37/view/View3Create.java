@@ -9,18 +9,19 @@ import java.sql.Statement;
 import java.util.Scanner;
 
 import modulo4.aula37.utils.Categoria;
-
+import modulo4.aula37.view.dao.CategoriaDao;
 import src.modulo4.Aula37.utils.Categoria;
 import src.modulo4.Aula37.utils.ConnectionFactory;
 
 public class View3Create {
     public static void main(String[] args) {
+        CategoriaDao dao = new CategoriaDao();
+
         Categoria model = new Categoria();
         Categoria model2 = new Categoria();
 
         try(Scanner sc = new Scanner(System.in))
         {
-
             System.out.print("Digite a categoria");
             model.setNome(sc.nextLine());
 
