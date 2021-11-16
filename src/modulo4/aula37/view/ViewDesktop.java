@@ -18,7 +18,7 @@ private CategoriaDao dao;
 private Container container;
 private JLabel lbNome;
 private JTextField txtNome;
-private JButton btnSalvar; btnDelete;
+private JButton btnSalvar, btnDelete, btnUpdate;
 private JTable table;
 private DefaultTableModel tableModel;
 
@@ -45,6 +45,7 @@ private DefaultTableModel tableModel;
         txtNome = new JTextField();
         btnSalvar = new JButton("Salvar");
         btnDelete = new JButton("Deletar");
+        btnUpdate = new JButton("Atualizar");
         table = new JTable();
         tableModel = (DefaultTableModel)table.getModel();
         tableModel.addColumn("id");
@@ -57,13 +58,14 @@ private DefaultTableModel tableModel;
         btnSalvar.setBounds(10, 40, 100, 20);
         table.setBounds(10, 80, 700, 300);
         btnDelete.setBounds(10, 400, 100, 20);
-
+        btnUpdate.setBounds(115, 400, 100, 20);
 
         container.add(lbNome);
         container.add(txtNome);
         container.add(btnSalvar);
         container.add(table);
         container.add(btnDelete);
+        container.add(btnUpdate);
     }
 
     private void adicionaEventos(){
@@ -97,9 +99,9 @@ private DefaultTableModel tableModel;
             public void actionPerformed(ActionEvent e){
                 int id = (int)table.getValueAt(table.getSelectedRow(), 0);
                 Categoria model = new Categoria();
-                model.set(id);
+                model.setId(id);
                 delete(model);
-                JOptionPane.showMessageDialog(container, "Categoria de id :  "+ model.getId() + "Deletado com sucesso!");
+                //JOptionPane.showMessageDialog(container, "Categoria de id :  "+ model.getId() + "Deletado com sucesso!");
             }
         });
     }

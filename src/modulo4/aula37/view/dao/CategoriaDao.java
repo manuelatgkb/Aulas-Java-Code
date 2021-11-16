@@ -12,6 +12,7 @@ import modulo4.aula37.utils.ConnectionFactory;
 
 public class CategoriaDao {
     public static void main(String[] args) {
+
         public int insert(Categoria model){
             int idGerado = 0;
             try(Connection conn = new ConnectionFactory().getConnection()){
@@ -32,7 +33,7 @@ public class CategoriaDao {
             }
             return idGerado;
         }
-        
+
 
             public ArraList<Categoria> read(){
                 ArrayList<Categoria> list = new ArrayList<Categoria>();
@@ -52,6 +53,27 @@ public class CategoriaDao {
                 return list;
             }
         }
+
+            public int update(Categoria model){
+                int linhasAfetadas = 0;
+
+                try(Connection conn = new ConnectionFactory().getConnection()){
+                   
+                    String sql = "UPDATE categoria SET nome = ? where id = ?";
+                    PreparedStatement prepStatement = conn.prepareStatement(sql);
+                    prepStatement.setString(1, model.getNome);
+                    prepStatement.setInt(2, model.getId());
+        
+                    prepStatement.execute(sql);
+                        
+                    linhasAfetadas = prepStatement.getUpdateCount();
+                    
+                }catch(SQLException e){
+                    e.printStackTrace();
+                }
+                return linhasAfetadas;
+            }
+        
             public int delete(Categoria model){
                 int linhasAfetadas = 0;
                 try(Connection conn = new ConnectionFactory().getConnection())
