@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch Leitura",
+            "request": "launch",
+            "mainClass": "P1.view.Leitura",
+            "projectName": "modulo4_27436996"
+        },
+        {
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Open index.jsp",
