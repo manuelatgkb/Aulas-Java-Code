@@ -13,11 +13,18 @@ public class Produto extends HttpServlet{
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp)throws ServletException, IOException{
         String nome = req.getParameter("nome");
-        float valor = Float.parseFloat(req.getParameter("valor"));
-        int id_categoria = Integer.parseInt("id_categoria");
+        String valor = req.getParameter("valor");
+        String id_cat = req.getParameter("id_categoria");
 
-        PrintWriter out = resp.getWriter();
-        out.printf("Nome do Produto: %s", nome, "valor: %s", valor, "id_categoria", id_categoria);
-      
+        if(valor !=null && id_cat!=null){
+            float valor_produto = Float.parseFloat(valor);
+            int id_categoria = Integer.parseInt("id_categoria");
+
+            PrintWriter out = resp.getWriter();
+            out.printf("Nome do Produto: %s", nome, "valor: %s", valor, "id_categoria", id_categoria);
+    }
+        else{
+            out.printf("Nome do Produto: %s", nome);
+        }
     }
 }
