@@ -21,7 +21,7 @@ public class Produto extends HttpServlet{
             int id_categoria = Integer.parseInt("id_categoria");
 
             PrintWriter out = resp.getWriter();
-            out.printf("Nome do Produto: %s", nome, "valor: %s", valor, "id_categoria", id_categoria);
+            out.printf("Nome do Produto: %s", nome, "valor: %s", valor, "id_categoria", id_cat);
     }
         else{
             out.printf("Nome do Produto: %s", nome);
