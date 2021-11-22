@@ -7,12 +7,12 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = "/categoria")
-public class Categoria extends HttpServlet{
+@WebServlet(urlPatterns = "/produto")
+
+public class Produto {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp)throws ServletException, IOException{
-        String nome =  req.getParameter("nome");
         PrintWriter out = resp.getWriter();
-        out.printf("Modulo Categoria -- cat =%s", nome);
+        out.println("Modulo Produtos - Cadastro Produto");
     }
 }
