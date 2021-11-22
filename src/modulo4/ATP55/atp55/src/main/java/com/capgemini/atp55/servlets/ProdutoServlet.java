@@ -12,7 +12,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet(urlPatterns = "/produto")
-public class ProdutpServlet extends HttpServlet{
+public class ProdutoServlet extends HttpServlet{
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp)throws ServletException, IOException{
         PrintWriter out = resp.getWriter();
@@ -26,7 +26,7 @@ public class ProdutpServlet extends HttpServlet{
 
         if(valor !=null && id_cat!=null){
             prod1.setValor(Float.parseFloat(valor));
-            prod1.setId_categoria(Integer.parseInt("id_categoria"));
+            prod1.setId_categoria(Integer.parseInt(id_cat));
 
             out.printf("Nome do Produto: %s", prod1.getNome(), "valor: %f", prod1.getValor(), "id da categoria: %d: ", prod1.getId_categoria());
         }else{

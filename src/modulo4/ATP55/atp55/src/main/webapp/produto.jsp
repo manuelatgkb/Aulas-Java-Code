@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Cadastro de Produto</h1>
-    <form action="/ATP54/produto">
+    <form action="/atp55-1/produto">
         nome: <input type="text" name="nome" id="nome">
         valor : <input type="number" name ="valor" id = "valor">
         id categoria : <input type="number" name ="id_categoria" id = "id_categoria">
