@@ -16,6 +16,6 @@ public class Categoria extends HttpServlet{
             // request = solicitaçao do usuário - ex: o usuário acessando end. via chrome
             //response = resposta do servidor ao usuário = ex. carregar a página web no chrome.
         PrintWriter out = resp.getWriter();
-        out.println("Servlet Categoria");
+        out.println("Cadastro Categoria");
     }
 }
