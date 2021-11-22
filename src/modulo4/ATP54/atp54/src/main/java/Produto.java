@@ -22,7 +22,7 @@ public class Produto extends HttpServlet{
             float valor_produto = Float.parseFloat(valor);
             int id_categoria = Integer.parseInt("id_categoria");
 
-            out.printf("Nome do Produto: %s", nome, "valor: %s", valor_produto, "id da categoria: %s: ", id_categoria);
+            out.printf("Nome do Produto: %s", nome, "valor: %f", valor_produto, "id da categoria: %d: ", id_categoria);
         }else{
             out.printf("Nome do Produto: %s", nome);
         }
