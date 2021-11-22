@@ -1,0 +1,4 @@
+com\capgemini\atp55\servlets\ProdutpServlet.class
+com\capgemini\atp55\models\Produto.class
+com\capgemini\atp55\models\Categoria.class
+com\capgemini\atp55\servlets\CategoriaServlet.class
