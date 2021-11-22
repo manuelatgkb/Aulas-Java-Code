@@ -12,7 +12,12 @@ import jakarta.servlet.http.HttpServletResponse;
 public class Produto extends HttpServlet{
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp)throws ServletException, IOException{
+        String nome = req.getParameter("nome");
+        float valor = Float.parseFloat(req.getParameter("valor"));
+        int id_categoria = Integer.parseInt("id_categoria");
+
         PrintWriter out = resp.getWriter();
-        out.println("produto");
+        out.printf("Nome do Produto: %s", nome, "valor: %s", valor, "id_categoria", id_categoria);
+      
     }
 }
