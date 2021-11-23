@@ -1,7 +1,0 @@
-servlets\CategoriaReadServlet.class
-models\Produto.class
-servlets\ProdutoServlet.class
-servlets\CategoriaServlet.class
-dao\CategoriaDao.class
-models\Categoria.class
-dao\ConnectionFactory.class
