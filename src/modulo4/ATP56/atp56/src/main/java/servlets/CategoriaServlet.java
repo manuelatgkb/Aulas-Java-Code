@@ -24,7 +24,9 @@ public class CategoriaServlet extends HttpServlet{
 
         //model.setId(dao.create(model));
 
-        PrintWriter out = resp.getWriter();
+        //PrintWriter out = resp.getWriter();
+
+        req.setAttribute("id", model.getId());
         RequestDispatcher rd = req.getRequestDispatcher("categoria-sucesso.jsp");
         rd.forward(req, resp);
 
