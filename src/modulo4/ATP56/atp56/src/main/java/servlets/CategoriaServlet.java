@@ -26,7 +26,10 @@ public class CategoriaServlet extends HttpServlet{
 
         //PrintWriter out = resp.getWriter();
 
+        
+        //model.setId(id);
         req.setAttribute("id", model.getId());
+        
         RequestDispatcher rd = req.getRequestDispatcher("categoria-sucesso.jsp");
         rd.forward(req, resp);
 

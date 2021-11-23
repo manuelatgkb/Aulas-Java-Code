@@ -1,5 +1,5 @@
 <%
-    int id = Integer.parseInt(request.getAttribute("id"));
+    int id = (int)request.getAttribute("id");
 %>
 
 <!DOCTYPE html>
@@ -13,5 +13,6 @@
 <body>
     <h1>Sucesso</h1>
     <h4>Categoria de id: <%=id %> Cadastrada com sucesso</h4>
+    <a href= "/categoria/listar">Listagem</a>
 </body>
 </html>
