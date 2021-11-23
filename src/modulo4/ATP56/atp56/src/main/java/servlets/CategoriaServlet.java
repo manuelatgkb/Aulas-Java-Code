@@ -2,7 +2,8 @@ package servlets;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-
+import jakarta.servlet.DispatcherType;
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -24,7 +25,10 @@ public class CategoriaServlet extends HttpServlet{
         //model.setId(dao.create(model));
 
         PrintWriter out = resp.getWriter();
-        out.printf("Categoria Salva com sucesso! Id gerado: = %d", model.getId());
+        RequestDispatcher rd = req.getRequestDispatcher("categoria-sucesso.jsp");
+        rd.forward(req, resp);
+
+       // out.printf("Categoria Salva com sucesso! Id gerado: = %d", model.getId());
 
 
     }
