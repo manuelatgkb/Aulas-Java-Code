@@ -9,10 +9,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sucesso </title>
+    <link rel = "stlylesheet" href="css/style.css">
+
 </head>
 <body>
     <h1>Sucesso</h1>
     <h4>Categoria de id: <%=id %> Cadastrada com sucesso</h4>
-    <a href= "/categoria/listar">Listagem</a>
+    <a href= "/categoria/listar">Categoria Listar</a> <br/>
 </body>
 </html>

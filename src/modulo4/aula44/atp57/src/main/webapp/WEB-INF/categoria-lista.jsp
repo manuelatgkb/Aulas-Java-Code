@@ -10,9 +10,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categoria-Lista</title>
+    <link rel = "stlylesheet" href="css/style.css">
+
 </head>
 <body>
-    <h1>Lista de Categroias</h1>
+    <h1>Lista de Categorias</h1>
+    <form action= "/apt57/categoria/listar" method = "get">
+        Nome: <input type="text" name="nome" id="nome">
+        <input type="submit" value="filtrar">
+    </form>
         <table>
             <thead>
             <tr>
