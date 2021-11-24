@@ -22,11 +22,11 @@ public class CategoriaServlet extends HttpServlet{
         model.setNome(req.getParameter("nome"));
         model.setDescricao(req.getParameter("descricao"));
 
-        //model.setId(dao.create(model));
+        model.setId(dao.create(model));
 
         //PrintWriter out = resp.getWriter();
 
-        
+
         //model.setId(id);
         req.setAttribute("id", model.getId());
         
