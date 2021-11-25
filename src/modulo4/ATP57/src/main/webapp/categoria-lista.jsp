@@ -1,7 +1,9 @@
 
-<%  page import = "java.utils.ArrayList, com.aula44.apt57.models.Categoria" %>
+<%@  page import = "java.util.ArrayList,models.Categoria" %>
 
-<% ArrayList<Categoria> categorias= (ArrayList<Categoria>)request.getAttribute ("categorias"); %>
+<% 
+    ArrayList<Categoria> categorias= (ArrayList<Categoria>)request.getAttribute("categoria"); 
+%>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -30,11 +32,11 @@
             
             <% for (Categoria model: categorias){ %>
                 <tr>
-                    <td><%=model.getId() %>/td>
-                    <td><% model.getNome() %></td>
+                    <td><%= model.getId() %>/td>
+                    <td><%= model.getNome() %></td>
                     <td>
-                        <a href= "/apt57/categoria/carregar? id= <% = model.getId() %>">Alterar</a>
-                        <a href= "/atp57/categoria/deletar? id= <% = model.getId() %>">Deletar</a>
+                        <a href= "/apt57/categoria/carregar? id= <%= model.getId() %>">Alterar</a>
+                        <a href= "/atp57/categoria/deletar? id= <%= model.getId() %>">Deletar</a>
 
                     <\td>
                 </tr>

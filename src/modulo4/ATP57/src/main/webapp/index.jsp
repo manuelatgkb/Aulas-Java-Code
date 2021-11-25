@@ -9,6 +9,6 @@
 
             <a href="/atp57-1/categoria.jsp">Categoria</a> <br/>
             <a href="/atp57-1/categoria/listar">Categoria Listar</a> <br/>
-            <a href="/apt57-1/produto.jsp">Produto</a>
+            <a href="/atp57-1/produto.jsp">Produto</a>
         </body>
 </html>

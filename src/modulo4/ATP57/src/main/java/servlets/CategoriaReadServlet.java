@@ -27,7 +27,7 @@ public class CategoriaReadServlet extends HttpServlet{
         }
         
         req.setAttribute("categoria", categorias);
-        RequestDispatcher rd = req.getRequestDispatcher("categoria-lista.jsp");
+        RequestDispatcher rd = req.getRequestDispatcher("/categoria-lista.jsp");
         rd.forward(req, resp);
     }
 }
