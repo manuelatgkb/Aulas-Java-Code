@@ -10,7 +10,7 @@
 </head>
 <body>
     <h1>Cadastro de Produto</h1>
-    <form action="/atp58-1/produto" method= "post">
+    <form action= "/atp58-1/produto" method= "post">
         nome: <input type="text" name="nome" id="nome">
         descricao : <input type="text" name ="descricao" id = "descricao">
         <input type="submit" value="salvar">

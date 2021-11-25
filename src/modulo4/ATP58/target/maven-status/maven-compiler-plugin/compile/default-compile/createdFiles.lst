@@ -1,0 +1,10 @@
+servlets\CategoriaAlterarServlet.class
+servlets\CategoriaReadServlet.class
+models\Produto.class
+servlets\CategoriaDeletarServlet.class
+servlets\ProdutoServlet.class
+servlets\CategoriaServlet.class
+servlets\CategoriaBuscarIdServlet.class
+dao\CategoriaDao.class
+models\Categoria.class
+dao\ConnectionFactory.class

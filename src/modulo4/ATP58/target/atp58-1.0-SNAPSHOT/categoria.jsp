@@ -1,3 +1,5 @@
+<%@ page import = "java.utils.ArrayList, models.Categoria" %>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -12,7 +14,7 @@
     <h1>Cadastro de Produto</h1>
     <link rel = "stlylesheet" href="css/styles.css">
 
-    <form action="/atp58-1/produto" method="post">
+    <form action= "/apt58-1/produto" method= "post">
         nome: <input type="text" name="nome" id="nome">
         valor : <input type="number" name ="valor" id = "valor">
         id categoria : <input type="number" name ="id_categoria" id = "id_categoria">

@@ -17,7 +17,7 @@
 </head>
 <body>
     <h1>Lista de Categorias</h1>
-    <form action= "/apt58/categoria/listar" method = "get">
+    <form action= "/apt58/categoria/listar" method= "get">
         Nome: <input type="text" name="nome" id="nome">
         <input type="submit" value="filtrar">
     </form>

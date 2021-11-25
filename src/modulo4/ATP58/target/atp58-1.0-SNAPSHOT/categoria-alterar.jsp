@@ -1,4 +1,4 @@
-<%@ page import = "java.utils.ArrayList, com.aula44.apt57.models.Categoria" %>
+<%@ page import = "java.utils.ArrayList, models.Categoria" %>
 
 <% Categoria model = (Categoria)request.getAttribute ("model"); %>
 
