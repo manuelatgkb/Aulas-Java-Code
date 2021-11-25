@@ -14,7 +14,7 @@
 </head>
 <body>
     <h1>Sucesso</h1>
-    <h4>Categoria de id: <%=id %> Cadastrada com sucesso</h4>
-    <a href= "/atp57-1/categoria/listar">Categoria Listar</a> <br/>
+    <h4>Categoria de id: <%=id %> Alterada com sucesso!</h4>
+    <a href= "/atp58-1/categoria/listar">Categoria Listar</a> <br/>
 </body>
 </html>

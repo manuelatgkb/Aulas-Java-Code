@@ -15,7 +15,7 @@
 </head>
 <body>
     <h1> Categroia - Alterando </h1>
-    <form action="/atp57-1/categoria/alterar" method="post">
+    <form action="/atp58-1/categoria/alterar" method="post">
         id: <input type="text" name="id" id="id" value= "<%=model.getId() %>"> <br/>
         nome : <input type="text" name ="nome" id = "nome" value= "<%=model.getNome() %>"> <br/>
         <input type="submit" value="Alterar">

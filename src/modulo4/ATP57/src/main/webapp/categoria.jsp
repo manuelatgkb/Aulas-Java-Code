@@ -10,7 +10,7 @@
 </head>
 <body>
     <h1>Cadastro de Produto</h1>
-    <link rel = "stlylesheet" href="css/style.css">
+    <link rel = "stlylesheet" href="css/styles.css">
 
     <form action="/atp57-1/produto" method="post">
         nome: <input type="text" name="nome" id="nome">
