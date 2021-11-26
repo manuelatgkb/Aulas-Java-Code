@@ -18,7 +18,17 @@ header{
     display: flex;
     justify-content: space-between;
 }
+#logo{
+    padding: 5px;
+    width: 80px;
+    font-size: 20px;
 
+}
+
+#logo a{
+    color: #050517;  
+    text-decoration:none;
+}
 
 nav ul{
     display: flex;
@@ -51,7 +61,6 @@ main{
     margin: 5px auto;
     background: #F4E3B2; 
     height: 500px;
-
 }
 
 
