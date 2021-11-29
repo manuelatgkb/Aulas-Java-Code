@@ -1,4 +1,4 @@
-package com.capgemini.manu.dao;
+package com.capgemini.manu.repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
