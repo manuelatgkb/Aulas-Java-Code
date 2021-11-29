@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Filmes</h1>
+    <h2>Lista de Filmes</h2>
+    <a href="/CadastroClientes-form">Cadastrar novo</a>
+    <br />
+    <table>
+        <thead>
+            <tr>ID</tr>
+            <tr>Nome</tr>
+            <tr>obrenome</tr>
+        </thead>
+        <tbody>
+            <tr th:each="cc:${CadsatroClientesBase}">
+                <td th:text="${cc.nome}"></td>
+                <td th:text="${cc.sobrenome}"></td>
+               <<td>
+                    <a th:href="@{'/CadastroClientes/editar/'+${f.id}}">Editar</a> |
+                    <a th:href="@{'/CadastroClientes/deletar/'+${f.id}}">Deletar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
