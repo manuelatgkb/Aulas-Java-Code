@@ -1,13 +1,12 @@
 package com.capgemnini.manu.Filmes;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootTest
+@SpringBootApplication
 class FilmesApplicationTests {
 
-	@Test
-	void contextLoads() {
+	public static void main(String[] args){
+		SpringBootApplication.run(FilmesApplication.class, args);
 	}
-
 }

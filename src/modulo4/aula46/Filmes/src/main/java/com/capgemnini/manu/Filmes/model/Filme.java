@@ -2,27 +2,30 @@ package com.capgemnini.manu.Filmes.model;
 
 import java.io.ObjectInputStream.GetField;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.GeneratorType;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Entity
+@Table(name="filme")
 public class Filme {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    
+    @Getter @Setter
     private String nome;
+    
+    @Getter @Setter
     private String nomeDiretor;
+
+    @Getter @Setter
     private String genero;
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-    public String getNome() {
-        return nome;
-    }
-    public void setNomeDiretor(String nomeDiretor) {
-        this.nomeDiretor = nomeDiretor;
-    }
-    public String getNomeDiretor() {
-        return nomeDiretor;
-    }
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }
-    public String getGenero() {
-        return genero;
-    }
 }

@@ -1,3 +1,19 @@
+
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
+
+import org.apache.catalina.startup.ClassLoaderFactory.Repository;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import repository.CadastroClienteRepository;
+
 @Controller
 public class CadastroClienteController(){
     
