@@ -1,22 +1,31 @@
+package com.capgemnini.manu.Filmes.controller;
+
 import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
+import com.capgemnini.manu.Filmes.model.Filme;
+import com.capgemnini.manu.Filmes.repository.*;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 @Controller
-	public FilmeController(FilmeRepository repository) {
+public class FilmeController {
+    private FilmeRepository repository;
+
+    public FilmeController(FilmeRepository repository){ //injeção de dependência
+        this.repository = repository;
     }
-
-    @GetMapping("/model/Filme")
-    public String filmes(Model req){
+    
+    @GetMapping("/filme")
+    public String filme(HttpServletRequest req){
         List<Filme> lista = (List<Filme>)repository.findAll();
-        req.addAttribute("Filmes", lista);
+        req.setAttribute("filmes", lista);
         return "filmes";
-
     }
 
     @GetMapping("/filme/form")
@@ -26,12 +35,11 @@ import org.springframework.web.bind.annotation.RequestBody;
         return "filmes-form";
     }
 
-	@PostMapping("/filme/salvar")
-    public String salvar(@RequestBody Filme model){
+    @PostMapping("/filme/salvar")
+    public String salvar(Filme model){ /* não precisa criar um model do tipo Filme, ele faz automaticamnte, mas precisa usar extamente os mesmos nomes dos atributos da classe Filme */
         repository.save(model);
         return "redirect:/filme";
     }
-    
 
     @GetMapping("/filme/deletar/{id}")
     public String deletar(@PathVariable int id){
@@ -44,13 +52,5 @@ import org.springframework.web.bind.annotation.RequestBody;
         Filme model = repository.findById(id).get();
         req.addAttribute("filme", model);
         return "filmes-form";
-    }
-    @PostMapping("/api/filme/{id}")
-    public String update(@RequestBody Filme model, @PathVariable int id){
-        if(model.getId() == id){
-        repository.save(model);
-        return "redirect:/filme";
-        }
-    return "id da url diferente do body";
     }
 }

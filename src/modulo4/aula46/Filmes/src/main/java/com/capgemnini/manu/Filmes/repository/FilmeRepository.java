@@ -1,5 +1,9 @@
-package repository;
+package com.capgemnini.manu.Filmes.repository;
 
-public class FilmeRepository {
+import com.capgemnini.manu.Filmes.model.Filme;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface FilmeRepository extends CrudRepository<Filme, Integer>{
     
 }
