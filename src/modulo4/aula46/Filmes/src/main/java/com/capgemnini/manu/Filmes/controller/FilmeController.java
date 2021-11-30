@@ -22,9 +22,14 @@ public class FilmeController {
     }
     
     @GetMapping("/filme")
-    public String filme(HttpServletRequest req){
-        List<Filme> lista = (List<Filme>)repository.findAll();
-        req.setAttribute("filmes", lista);
+    public String filme(Model req, String nome){
+        List<Filme> lista;
+        if(nome !=null){ 
+            lista = (List<Filme>)repository.findByNome(nome);
+        }else{
+            lista= (List<Filme>)repository.findAll();
+        }
+        req.addAttribute("filmes", lista);
         return "filmes";
     }
 
