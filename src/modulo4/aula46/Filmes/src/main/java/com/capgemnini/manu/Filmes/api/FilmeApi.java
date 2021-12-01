@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@RestController //para o formato json
 @RequestMapping("/api/filme")
 public class FilmeApi {
 
@@ -24,12 +24,13 @@ public class FilmeApi {
     private FilmeRepository repository;
 
     @GetMapping
-    public List<Filme> filme(String nome){
+    public List<Filme>filme(String nome){
         if(nome !=null){
-        return (List<Filme>repository.findByNome(nome);
+            return (List<Filme>)repository.findByNome(nome);
         }
+        return(List<Filme>)repository.findAll();
 
-        return (List<Filme>)repository.findAll(Sort.by(Sort.BY.Direction.ASC, "id"));
+        //return (List<Filme>)repository.findAll(Sort.by(Sort.BY.Direction.ASC, "id"));
         }
 
     @PostMapping
