@@ -1,0 +1,16 @@
+table{
+    width: 60%;
+    margin: auto;
+    background-color: rgb(158, 155, 150);
+}
+
+thead{
+    background: black;
+    color: white;
+    height: 2em;
+    text-transform: uppercase;
+}
+
+tbody{
+    font-size: 20px;
+}
